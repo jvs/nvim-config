@@ -10,14 +10,19 @@ git clone https://github.com/jvs/nvim-config.git ~/.config/nvim
 nvim --headless +"silent! PlugInstall" +qall
 ```
 
+When you first run `nvim`, the treesitter plugin will start downloading and
+building a bunch of parsers.
+
+Run the commands `:checkhealth` and `:PlugStatus` to make sure everything is OK.
+
 
 ## Requirements
 
-* fd-find (fd)
-* ripgrep (rg)
+* fd-find (`fd`)
+* ripgrep (`rg`)
 
 
-### fd-find (fd)
+### Installing fd-find (`fd`)
 
 See https://github.com/sharkdp/fd#installation for installation.
 
@@ -33,7 +38,7 @@ sudo ln -s /usr/local/bin/fd-v8.3.0-x86_64-apple-darwin/fd /usr/local/bin/fd
 rm fd-v8.3.0-x86_64-apple-darwin.tar.gz
 ```
 
-### Ripgrep (rg)
+### Installing Ripgrep (`rg`)
 
 See https://github.com/BurntSushi/ripgrep#installation for installation.
 
@@ -49,7 +54,7 @@ sudo ln -s /usr/local/bin/ripgrep-13.0.0-x86_64-apple-darwin/rg /usr/local/bin/r
 rm ripgrep-13.0.0-x86_64-apple-darwin.tar.gz
 ```
 
-## Installing nvim
+## Installing Neovim (`nvim`)
 
 ### macOS
 

@@ -7,5 +7,5 @@ if ok then
     textobjects = { enable = true },
   }
 else
-  print('nvim-treesitter plugin not found.')
+  print('nvim-treesitter plugin not found.\n')
 end
