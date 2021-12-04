@@ -42,3 +42,10 @@ nnoremap <leader><leader> :lua require('jvs.navigation').toggle_buffers()<CR>
 nnoremap <leader>1 :Goyo<CR>
 nnoremap <leader>2 :Limelight<CR>
 nnoremap <leader>3 :Limelight!<CR>
+
+" Chords.
+call arpeggio#load()
+
+" Use jk as escape and df as colon.
+call arpeggio#map('cilnosvx', '', 0, 'jk', '<Esc>')
+call arpeggio#map('cilnosvx', '', 0, 'df', ':')

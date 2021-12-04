@@ -11,6 +11,7 @@ call plug#begin()
 Plug '907th/vim-auto-save'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'kana/vim-arpeggio'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mbbill/undotree'
