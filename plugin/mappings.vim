@@ -5,6 +5,11 @@ let mapleader = "\<Space>"
 " Make Y yank to the end of the line.
 nnoremap Y y$
 
+" Cut, copy, and paste using the clipboard with leader-[xcv].
+vnoremap <leader>x "*d
+vnoremap <leader>c "*y
+nnoremap <leader>v "*p
+
 " Create splits with leader-slash and leader-dash.
 nnoremap <leader>\ :vsp<CR>
 nnoremap <leader>- :sp<CR>
