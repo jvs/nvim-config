@@ -7,6 +7,7 @@ My Neovim configuration.
 
 ```bash
 git clone https://github.com/jvs/nvim-config.git ~/.config/nvim
+nvim --headless +"silent! PlugInstall" +qall
 ```
 
 
@@ -29,6 +30,7 @@ cd ~/Downloads
 curl -LO https://github.com/sharkdp/fd/releases/download/v8.3.0/fd-v8.3.0-x86_64-apple-darwin.tar.gz
 sudo tar zxf fd-v8.3.0-x86_64-apple-darwin.tar.gz -C /usr/local/bin
 sudo ln -s /usr/local/bin/fd-v8.3.0-x86_64-apple-darwin/fd /usr/local/bin/fd
+rm fd-v8.3.0-x86_64-apple-darwin.tar.gz
 ```
 
 ### Ripgrep (rg)
@@ -44,6 +46,7 @@ cd ~/Downloads
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-apple-darwin.tar.gz
 sudo tar zxf ripgrep-13.0.0-x86_64-apple-darwin.tar.gz -C /usr/local/bin
 sudo ln -s /usr/local/bin/ripgrep-13.0.0-x86_64-apple-darwin/rg /usr/local/bin/rg
+rm ripgrep-13.0.0-x86_64-apple-darwin.tar.gz
 ```
 
 ## Installing nvim
