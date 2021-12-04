@@ -1,8 +1,15 @@
 " Color scheme.
 let g:vscode_style = "dark"
-colorscheme vscode
+silent! colorscheme vscode
 
-lua require('lualine').setup { options = { theme = 'vscode' } }
+lua << EOF
+local ok, lualine = pcall(require, 'lualine')
+if ok then
+  lualine.setup { options = { theme = 'vscode' } }
+else
+  print('lualine plugin not found.')
+end
+EOF
 
 " Use the commands :Light and :Dark to change the current style.
 command! Light lua require('vscode').change_style("light")
