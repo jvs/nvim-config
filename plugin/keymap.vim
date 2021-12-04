@@ -49,8 +49,10 @@ nnoremap <leader>2 :Limelight<CR>
 nnoremap <leader>3 :Limelight!<CR>
 
 " Chords.
-call arpeggio#load()
+if exists('*arpeggio#load')
+    call arpeggio#load()
 
-" Use jk as escape and df as colon.
-call arpeggio#map('cilnosvx', '', 0, 'jk', '<Esc>')
-call arpeggio#map('cilnosvx', '', 0, 'df', ':')
+    " Use jk as escape and df as colon.
+    call arpeggio#map('cilnosvx', '', 0, 'jk', '<Esc>')
+    call arpeggio#map('cilnosvx', '', 0, 'df', ':')
+endif
