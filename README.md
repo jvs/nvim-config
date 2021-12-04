@@ -10,9 +10,47 @@ git clone https://github.com/jvs/nvim-config.git ~/.config/nvim
 ```
 
 
+## Requirements
+
+* fd-find (fd)
+* ripgrep (rg)
+
+
+### fd-find (fd)
+
+See https://github.com/sharkdp/fd#installation for installation.
+
+Use `brew install fd`, or download a release from
+https://github.com/sharkdp/fd/releases
+
+For example, on macOS:
+```bash
+cd ~/Downloads
+curl -LO https://github.com/sharkdp/fd/releases/download/v8.3.0/fd-v8.3.0-x86_64-apple-darwin.tar.gz
+sudo tar zxf fd-v8.3.0-x86_64-apple-darwin.tar.gz -C /usr/local/bin
+sudo ln -s /usr/local/bin/fd-v8.3.0-x86_64-apple-darwin/fd /usr/local/bin/fd
+```
+
+### Ripgrep (rg)
+
+See https://github.com/BurntSushi/ripgrep#installation for installation.
+
+Use `brew install rg`, or download a release from
+https://github.com/BurntSushi/ripgrep/releases
+
+For example, on macOS:
+```bash
+cd ~/Downloads
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-apple-darwin.tar.gz
+sudo tar zxf ripgrep-13.0.0-x86_64-apple-darwin.tar.gz -C /usr/local/bin
+sudo ln -s /usr/local/bin/ripgrep-13.0.0-x86_64-apple-darwin/rg /usr/local/bin/rg
+```
+
 ## Installing nvim
 
 ### macOS
+
+Use `brew install nvim`, or to install the nightly release:
 
 ```bash
 # Download the latest release.
