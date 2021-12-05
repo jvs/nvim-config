@@ -43,10 +43,20 @@ nnoremap <silent> <leader>q :lua require('jvs.navigation').close_buffer()<CR>
 " Switch between the last two buffers with leader-leader.
 nnoremap <leader><leader> :lua require('jvs.navigation').toggle_buffers()<CR>
 
-" Focus on text with leader-[123].
-nnoremap <leader>1 :Goyo<CR>
-nnoremap <leader>2 :Limelight<CR>
-nnoremap <leader>3 :Limelight!<CR>
+" Focus on text with leader-rr, leader-er, and leader-re.
+nnoremap <leader>rr :Goyo<CR>
+nnoremap <leader>er :Limelight<CR>
+nnoremap <leader>re :Limelight!<CR>
+
+" Open terminals with leader[1-8]
+nnoremap <leader>1 :1ToggleTerm<CR>
+nnoremap <leader>2 :2ToggleTerm<CR>
+nnoremap <leader>3 :3ToggleTerm<CR>
+nnoremap <leader>4 :4ToggleTerm<CR>
+nnoremap <leader>5 :5ToggleTerm<CR>
+nnoremap <leader>6 :6ToggleTerm<CR>
+nnoremap <leader>7 :7ToggleTerm<CR>
+nnoremap <leader>8 :8ToggleTerm<CR>
 
 " Lazygit with leader-g.
 nnoremap <leader>g :lua _lazygit_toggle()<CR>
