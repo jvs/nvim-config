@@ -11,7 +11,7 @@ nvim --headless +"silent! PlugInstall" +qall
 ```
 
 When you first run `nvim`, the treesitter plugin will start downloading and
-building a bunch of parsers.
+building a bunch of parsers in the background.
 
 Run the commands `:checkhealth` and `:PlugStatus` to make sure everything is OK.
 
