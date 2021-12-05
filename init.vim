@@ -35,3 +35,11 @@ call plug#end()
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
+"
+
+" Utility function to roughly check if a plugin is loaded with vim-plug.
+function! PlugLoaded(name)
+    return (has_key(g:plugs, a:name)
+        \ && isdirectory(g:plugs[a:name].dir)
+        \ && stridx(&rtp, g:plugs[a:name].dir) >= 0)
+endfunction
