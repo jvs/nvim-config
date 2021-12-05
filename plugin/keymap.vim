@@ -48,6 +48,9 @@ nnoremap <leader>1 :Goyo<CR>
 nnoremap <leader>2 :Limelight<CR>
 nnoremap <leader>3 :Limelight!<CR>
 
+" Lazygit with leader-g.
+nnoremap <leader>g :lua _lazygit_toggle()<CR>
+
 " Chords.
 if PlugLoaded('vim-arpeggio')
     call arpeggio#load()

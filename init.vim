@@ -10,6 +10,7 @@ endif
 call plug#begin()
 
 Plug '907th/vim-auto-save'
+Plug 'akinsho/toggleterm.nvim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'kana/vim-arpeggio'
