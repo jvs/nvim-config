@@ -5,7 +5,7 @@ lua << EOF
 local ok, tree = pcall(require, 'nvim-tree')
 if ok then
   tree.setup {
-    open_on_setup = true,
+    open_on_setup = false,
     update_to_buf_dir = { enable = false }
   }
 else
