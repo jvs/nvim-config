@@ -10,15 +10,16 @@ vnoremap <leader>x "*d
 vnoremap <leader>c "*y
 nnoremap <leader>v "*p
 
-" Create splits with leader-slash and leader-dash.
-nnoremap <leader>\ :vsp<CR>
-nnoremap <leader>- :sp<CR>
 
 " Go to start of line with leader-H and end of line with leader-L.
 nnoremap <leader>H ^
 xnoremap <leader>H ^
 nnoremap <leader>L g_
 xnoremap <leader>L g_
+
+" Create splits with leader-slash and leader-dash.
+nnoremap <leader>\ :vsp<CR>
+nnoremap <leader>- :sp<CR>
 
 " Navigate splits with leader-[hjkl].
 nnoremap <leader>j <C-W><C-J>
