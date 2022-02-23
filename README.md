@@ -24,57 +24,29 @@ Run the commands `:checkhealth` and `:PlugStatus` to make sure everything is OK.
 
 ### Installing fd-find (`fd`)
 
-See https://github.com/sharkdp/fd#installation for installation.
+Options:
+* `brew install fd`
+* or `cargo install fd-find`
+* or download a release from https://github.com/sharkdp/fd/releases
 
-Use `brew install fd`, or download a release from
-https://github.com/sharkdp/fd/releases
+See https://github.com/sharkdp/fd#installation for more installation options.
 
-For example, on macOS:
-```bash
-# Download. (Check https://github.com/sharkdp/fd/releases for releases.)
-cd ~/Downloads
-curl -LO https://github.com/sharkdp/fd/releases/download/v8.3.0/fd-v8.3.0-x86_64-apple-darwin.tar.gz
-
-# Extract.
-sudo mkdir -p /usr/local/bin
-sudo tar zxf fd-v8.3.0-x86_64-apple-darwin.tar.gz -C /usr/local/bin
-
-# Link.
-sudo ln -sf /usr/local/bin/fd-v8.3.0-x86_64-apple-darwin/fd /usr/local/bin/fd
-
-# Cleanup.
-rm fd-v8.3.0-x86_64-apple-darwin.tar.gz
-```
 
 ### Installing Ripgrep (`rg`)
 
-See https://github.com/BurntSushi/ripgrep#installation for installation.
+Options:
+* `brew install rg`
+* or `cargo install ripgrep`
+* or download a release from https://github.com/BurntSushi/ripgrep/releases
 
-Use `brew install rg`, or download a release from
-https://github.com/BurntSushi/ripgrep/releases
+See https://github.com/BurntSushi/ripgrep#installation for more installation options.
 
-For example, on macOS:
-```bash
-# Download. (Check https://github.com/BurntSushi/ripgrep/releases for releases.)
-cd ~/Downloads
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-apple-darwin.tar.gz
-
-# Extract.
-sudo mkdir -p /usr/local/bin
-sudo tar zxf ripgrep-13.0.0-x86_64-apple-darwin.tar.gz -C /usr/local/bin
-
-# Link.
-sudo ln -sf /usr/local/bin/ripgrep-13.0.0-x86_64-apple-darwin/rg /usr/local/bin/rg
-
-# Cleanup.
-rm ripgrep-13.0.0-x86_64-apple-darwin.tar.gz
-```
 
 ## Installing Neovim (`nvim`)
 
 ### macOS
 
-Use `brew install nvim`, or to install the nightly release:
+Use `brew install nvim`, or to install the nightly release (on macOS x86):
 
 ```bash
 # Download.
