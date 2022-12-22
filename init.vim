@@ -23,7 +23,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sudormrfbin/cheatsheet.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
