@@ -49,17 +49,25 @@ vim.keymap.set('n', '<A-Right>', ':vertical resize +2<CR>', {
   desc = 'Increase window width.',
 })
 
--- Show the tree with <leader>t.
-vim.keymap.set('n', '<leader>t', ':Neotree float reveal toggle<CR>', {
-  desc = 'Toggle [T]ree',
-})
-
 -- Cycle through buffers with H and L.
 vim.keymap.set('n', '<S-l>', ':bnext<CR>', {
   desc = 'Go to the next buffer.',
 })
 vim.keymap.set('n', '<S-h>', ':bprevious<CR>', {
   desc = 'Go to the previous buffer.',
+})
+
+-- Show the tree with <leader>t.
+vim.keymap.set('n', '<leader>t', ':Neotree float reveal toggle<CR>', {
+  desc = 'Toggle [T]ree',
+})
+
+vim.keymap.set('n', '<leader>gb', ':Neotree float buffers toggle<CR>', {
+  desc = 'View current buffers as tree',
+})
+
+vim.keymap.set('n', '<leader>gs', ':Neotree float git_status toggle<CR>', {
+  desc = 'View [G]it [S]tatus as tree',
 })
 
 
