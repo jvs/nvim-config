@@ -41,7 +41,7 @@ require('neo-tree').setup {
         -- desc = 'copy full path',
       },
       ["K"] = "close_node",
-      ["J"] = "expand_all_nodes",
+      -- ["J"] = "expand_all_nodes", -- This seems to be buggy at the moment.
     },
   },
 }
