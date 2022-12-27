@@ -70,6 +70,38 @@ vim.keymap.set('n', '<leader>gs', ':Neotree float git_status toggle<CR>', {
   desc = 'View [G]it [S]tatus as tree',
 })
 
+-- Toggle a floating terminal with ctrl+\.
+-- To toggle a specific terminal, press a number key and the ctrl+\ (e.g. 2<c-\>).
+-- Configured in user/toggleterm.lua.
+
+-- Toggle terminals 1, 2, and 3 with ctrl+[jkh].
+vim.keymap.set({ 'i', 'n' }, '<C-j>', '<CMD>1ToggleTerm<CR>', { desc = 'Toggle terminal-1.' })
+vim.keymap.set({ 'i', 'n' }, '<C-k>', '<CMD>2ToggleTerm<CR>', { desc = 'Toggle terminal-2.' })
+vim.keymap.set({ 'i', 'n' }, '<C-h>', '<CMD>3ToggleTerm<CR>', { desc = 'Toggle terminal-3.' })
+
+function _switch_terminals(target_terminal)
+  local current_buf = vim.api.nvim_get_current_buf()
+  local current_terminal = vim.api.nvim_buf_get_var(current_buf, 'toggle_number')
+  vim.cmd('ToggleTerm')
+
+  if current_terminal ~= target_terminal then
+    -- TODO: Figure out how to jump between terminals without leaving insert-mode
+    -- in the destination terminal. For now, adding a delay seems to work.
+    vim.defer_fn(function()
+      vim.cmd(target_terminal .. 'ToggleTerm')
+    end, 50)
+  end
+end
+
+vim.keymap.set('t', '<C-j>', '<CMD>lua _switch_terminals(1)<CR>',
+  { desc = 'Toggle terminal-1.', noremap = true })
+
+vim.keymap.set('t', '<C-k>', '<CMD>lua _switch_terminals(2)<CR>',
+  { desc = 'Toggle terminal-2.', noremap = true })
+
+vim.keymap.set('t', '<C-h>', '<CMD>lua _switch_terminals(3)<CR>',
+  { desc = 'Toggle terminal-3.', noremap = true })
+
 
 -- Set undo breakpoints after typing certain characters.
 vim.keymap.set('i', ',', ',<c-g>u', {})
