@@ -10,6 +10,15 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { noremap = true, silent = true
 --   term_mode = 't'
 --   command_mode = 'c'
 
+-- Toggle comments with ctrl+/.
+vim.keymap.set('n', '<C-/>',
+  function() require("Comment.api").toggle.linewise.current() end,
+  { desc = 'Comment or uncomment line.' })
+
+vim.keymap.set('v', '<C-/>',
+  '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
+  { desc = 'Comment or uncomment lines.' })
+
 
 -- Create splits with <leader>\ and <leader>-.
 vim.keymap.set('n', '<leader>\\', ':vsp<CR>', {
