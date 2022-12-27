@@ -70,6 +70,11 @@ vim.keymap.set('n', '<leader>gs', ':Neotree float git_status toggle<CR>', {
   desc = 'View [G]it [S]tatus as tree',
 })
 
+-- Show the undo tree with ctrl+u.
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', {
+  desc = 'View [U]ndo tree.',
+})
+
 -- Toggle a floating terminal with ctrl+\.
 -- To toggle a specific terminal, press a number key and the ctrl+\ (e.g. 2<c-\>).
 -- Configured in user/toggleterm.lua.
