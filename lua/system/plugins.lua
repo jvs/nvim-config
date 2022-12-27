@@ -99,8 +99,9 @@ require('packer').startup(function(use)
     end,
   }
 
-  -- Undo tree.
   use 'mbbill/undotree'
+  use 'Pocco81/true-zen.nvim'
+
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
