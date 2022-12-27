@@ -76,7 +76,7 @@ require('packer').startup(function(use)
   use({
     'Pocco81/auto-save.nvim',
     config = function()
-      require("auto-save").setup {
+      require('auto-save').setup {
         debounce_delay = 500,
       }
     end,
