@@ -7,13 +7,14 @@ My Neovim configuration.
 
 ```bash
 git clone https://github.com/jvs/nvim-config.git ~/.config/nvim
-nvim --headless +"silent! PlugInstall" +qall
+nvim --headless +"silent! PackerSync" +qall
 ```
 
 When you first run `nvim`, the treesitter plugin will start downloading and
 building a bunch of parsers in the background.
 
-Run the commands `:checkhealth` and `:PlugStatus` to make sure everything is OK.
+Run the commands `:checkhealth` and `:PackerCompile` and then `:PackerStatus`
+to make sure everything is OK.
 
 
 ## Requirements
