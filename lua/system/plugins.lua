@@ -83,16 +83,7 @@ require('packer').startup(function(use)
   })
 
   -- Terminal windows.
-  use {
-    'akinsho/toggleterm.nvim',
-    tag = '*',
-    config = function()
-      require("toggleterm").setup({
-        direction = 'float',
-        open_mapping = [[<c-\>]],
-      })
-    end
-  }
+  use { 'akinsho/toggleterm.nvim', tag = '*' }
 
   -- Tree explorer.
   use {
