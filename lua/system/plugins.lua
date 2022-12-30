@@ -108,6 +108,15 @@ require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'Pocco81/true-zen.nvim'
 
+  -- Command palette.
+  use {
+    'jvs/commanderly.nvim',
+    requires = { 'nvim-telescope/telescope.nvim' },
+    config = function()
+      require('commanderly').setup()
+    end,
+  }
+
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
