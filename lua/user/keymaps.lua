@@ -1,14 +1,7 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { noremap = true, silent = true })
 
--- Modes
---   normal_mode = 'n'
---   insert_mode = 'i'
---   visual_mode = 'v'
---   visual_block_mode = 'x'
---   term_mode = 't'
---   command_mode = 'c'
 
 -- Toggle comments with ctrl+/.
 vim.keymap.set('n', '<C-/>',
@@ -20,20 +13,12 @@ vim.keymap.set('v', '<C-/>',
   { desc = 'Comment or uncomment lines.' })
 
 
--- Create splits with <leader>\ and <leader>-.
-vim.keymap.set('n', '<leader>\\', ':vsp<CR>', {
-  desc = 'Vertical Split (side-by-side)'
-})
-
-vim.keymap.set('n', '<leader>-', ':sp<CR>', {
-  desc = 'Horizontal Split (above and below)'
-})
-
 -- Navigate splits with <leader>[hjkl].
 vim.keymap.set('n', '<leader>h', '<C-W><C-H>', { desc = 'Move to Left Split' })
 vim.keymap.set('n', '<leader>j', '<C-W><C-J>', { desc = 'Move to Lower Split' })
 vim.keymap.set('n', '<leader>k', '<C-W><C-K>', { desc = 'Move to Upper Split' })
 vim.keymap.set('n', '<leader>l', '<C-W><C-L>', { desc = 'Move to Right Split' })
+
 
 -- Resize splits with alt+arrows.
 vim.keymap.set('n', '<A-Up>', ':resize +2<CR>', {
@@ -49,13 +34,6 @@ vim.keymap.set('n', '<A-Right>', ':vertical resize +2<CR>', {
   desc = 'Increase window width.',
 })
 
--- Cycle through buffers with H and L.
-vim.keymap.set('n', '<S-l>', ':bnext<CR>', {
-  desc = 'Go to the next buffer.',
-})
-vim.keymap.set('n', '<S-h>', ':bprevious<CR>', {
-  desc = 'Go to the previous buffer.',
-})
 
 -- Show the tree with <leader>t.
 vim.keymap.set('n', '<leader>t', ':Neotree float reveal toggle<CR>', {
@@ -74,6 +52,7 @@ vim.keymap.set('n', '<leader>gs', ':Neotree float git_status toggle<CR>', {
 vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', {
   desc = 'View [U]ndo tree.',
 })
+
 
 -- Toggle a floating terminal with ctrl+\.
 -- To toggle a specific terminal, press a number key and the ctrl+\ (e.g. 2<c-\>).
@@ -98,6 +77,7 @@ function _switch_terminals(target_terminal)
   end
 end
 
+-- Toggle terminals from terminal mode.
 vim.keymap.set('t', '<C-j>', '<CMD>lua _switch_terminals(1)<CR>',
   { desc = 'Toggle terminal-1.', noremap = true })
 
@@ -115,16 +95,19 @@ vim.keymap.set('i', '(', '(<c-g>u', {})
 vim.keymap.set('i', ')', ')<c-g>u', {})
 vim.keymap.set('i', '<CR>', '<CR><c-g>u', {})
 
+
 -- Move selected text up and down with alt+[jk].
-vim.keymap.set('v', '<A-j>', ':m .+1<CR>==', {
-  desc = 'Move selected text down one line.',
-})
-vim.keymap.set('v', '<A-k>', ':m .-2<CR>==', {
-  desc = 'Move selected text up one line.',
-})
+-- vim.keymap.set('v', '<A-j>', ':m .+1<CR>==', {
+--   desc = 'Move selected text down one line.',
+-- })
+-- vim.keymap.set('v', '<A-k>', ':m .-2<CR>==', {
+--   desc = 'Move selected text up one line.',
+-- })
+
 
 -- When pasting over selected text, don't put the selected text in the register.
 vim.keymap.set('v', 'p', '"_dP', {})
+
 
 -- Cut, copy, and paste using the clipboard.
 vim.keymap.set('v', '<leader>x', '"*d', {
@@ -142,6 +125,37 @@ vim.keymap.set('n', '<leader>v', '"*p', {
   noremap = true,
 })
 
--- Stay in indent mode
+
+-- Stay in indent mode while changing indentation.
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
+
+
+local has_commanderly, commanderly = pcall(require, "commanderly")
+
+if not has_commanderly then
+  error("Remaining keymaps require commanderly.nvim")
+end
+
+
+vim.keymap.set('n', '<leader><leader>', '<CMD>Commanderly', { desc = 'Open command palette' })
+
+
+-- Create splits with <leader>\ and <leader>-.
+vim.keymap.set('n', '<leader>\\', '<Plug>(CommanderlyVerticalSplit)', {
+  desc = 'Vertical Split (side-by-side)'
+})
+
+vim.keymap.set('n', '<leader>-', '<Plug>(CommanderlyHorizontalSplit)', {
+  desc = 'Horizontal Split (above and below)'
+})
+
+
+-- Cycle through buffers with H and L.
+vim.keymap.set('n', '<S-l>', '<Plug>(CommanderlyShowNextBuffer)', {
+  desc = 'Go to the next buffer.',
+})
+
+vim.keymap.set('n', '<S-h>', '<Plug>(CommanderlyShowPreviousBuffer)', {
+  desc = 'Go to the previous buffer.',
+})
