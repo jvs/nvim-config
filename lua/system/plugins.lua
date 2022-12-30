@@ -49,10 +49,16 @@ require('packer').startup(function(use)
   use 'Mofiqul/vscode.nvim'
 
   -- Status line.
-  use 'nvim-lualine/lualine.nvim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
   -- Use "gc" to comment visual regions/lines.
-  use 'numToStr/Comment.nvim' 
+  use {
+    'numToStr/Comment.nvim',
+    config = function() require('Comment').setup() end,
+  }
 
   -- Detect tabstop and shiftwidth automatically.
   use 'tpope/vim-sleuth' 
@@ -132,20 +138,3 @@ end
 --     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 --   augroup end
 -- ]])
-
--- Actually, for now just run the commands manually.
--- Type ":Packer" in command mode, and then press <TAB> to see the commands.
--- PackerClean
--- PackerCompile
--- PackerInstall
--- PackerLoad
--- PackerSnapshot
--- PackerSnapshotDelete
--- PackerSnapshotRollback
--- PackerStatus
--- PackerSync
--- PackerUpdate
-
-
-require('Comment').setup()
-
