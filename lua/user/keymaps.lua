@@ -138,7 +138,8 @@ if not has_commanderly then
 end
 
 
-vim.keymap.set('n', '<leader><leader>', '<CMD>Commanderly', { desc = 'Open command palette' })
+vim.keymap.set('n', '<leader><leader>', '<CMD>Commanderly<CR>',
+  { desc = 'Open command palette' })
 
 
 -- Create splits with <leader>\ and <leader>-.
