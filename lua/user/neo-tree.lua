@@ -13,6 +13,7 @@ require('neo-tree').setup {
   window = {
     mappings = {
       ['<space>'] = false,
+      ["<esc>"] = "close_window",
       ['c'] = {
         function(state)
           -- TODO: Find out the right way to get the relative path.
