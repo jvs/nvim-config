@@ -13,13 +13,6 @@ vim.keymap.set('v', '<C-/>',
   { desc = 'Comment or uncomment lines.' })
 
 
--- Navigate splits with <leader>[hjkl].
-vim.keymap.set('n', '<leader>h', '<C-W><C-H>', { desc = 'Move to Left Split' })
-vim.keymap.set('n', '<leader>j', '<C-W><C-J>', { desc = 'Move to Lower Split' })
-vim.keymap.set('n', '<leader>k', '<C-W><C-K>', { desc = 'Move to Upper Split' })
-vim.keymap.set('n', '<leader>l', '<C-W><C-L>', { desc = 'Move to Right Split' })
-
-
 -- Resize splits with alt+arrows.
 vim.keymap.set('n', '<A-Up>', ':resize +2<CR>', {
   desc = 'Increase window height.',
@@ -147,6 +140,12 @@ local map = commanderly.map
 map("<leader>\\", "vertical_split")
 map("<leader>-", "horizontal_split")
 
--- Cycle through buffers with H and L.
+-- Cycle through buffers with shift+h and shift+l.
 map("<S-l>", "next_buffer")
 map("<S-h>", "previous_buffer")
+
+-- Move between splits/windows.
+map("<leader>h", "window_left")
+map("<leader>j", "window_down")
+map("<leader>k", "window_up")
+map("<leader>l", "window_right")
