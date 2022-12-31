@@ -22,6 +22,7 @@ vim.o.mouse = 'a'
 vim.o.report = 0
 vim.o.scrolloff = 2
 vim.o.shiftround = true
+vim.o.spell = false
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.synmaxcol = 250
