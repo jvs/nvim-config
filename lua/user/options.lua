@@ -49,6 +49,3 @@ vim.wo.relativenumber = true
 
 -- autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 -- autocmd FileType lua setlocal shiftwidth=2 tabstop=2
-
--- Set colorscheme
--- vim.cmd [[colorscheme vscode]]
