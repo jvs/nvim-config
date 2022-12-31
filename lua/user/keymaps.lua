@@ -138,25 +138,15 @@ if not has_commanderly then
 end
 
 
-vim.keymap.set('n', '<leader><leader>', '<CMD>Commanderly<CR>',
-  { desc = 'Open command palette' })
+vim.keymap.set('n', '<leader><leader>', commanderly.open, { desc = 'Open command palette' })
 
+-- Create keymaps for commanderly commands.
+local map = commanderly.map
 
 -- Create splits with <leader>\ and <leader>-.
-vim.keymap.set('n', '<leader>\\', '<Plug>(CommanderlyVerticalSplit)', {
-  desc = 'Vertical Split (side-by-side)'
-})
-
-vim.keymap.set('n', '<leader>-', '<Plug>(CommanderlyHorizontalSplit)', {
-  desc = 'Horizontal Split (above and below)'
-})
-
+map("<leader>\\", "vertical_split")
+map("<leader>-", "horizontal_split")
 
 -- Cycle through buffers with H and L.
-vim.keymap.set('n', '<S-l>', '<Plug>(CommanderlyShowNextBuffer)', {
-  desc = 'Go to the next buffer.',
-})
-
-vim.keymap.set('n', '<S-h>', '<Plug>(CommanderlyShowPreviousBuffer)', {
-  desc = 'Go to the previous buffer.',
-})
+map("<S-l>", "next_buffer")
+map("<S-h>", "previous_buffer")
