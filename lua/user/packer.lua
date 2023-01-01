@@ -42,7 +42,7 @@ require('packer').startup(function(use)
   }
 
   -- Additional text objects via treesitter.
-  use { 
+  use {
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
   }
@@ -98,7 +98,7 @@ require('packer').startup(function(use)
   }
 
   -- Detect tabstop and shiftwidth automatically.
-  use 'tpope/vim-sleuth' 
+  use 'tpope/vim-sleuth'
 
   -- Fuzzy Finder (files, lsp, etc).
   use {
