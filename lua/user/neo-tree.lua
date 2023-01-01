@@ -14,7 +14,7 @@ require('neo-tree').setup {
     position = 'float',
     mappings = {
       ['<space>'] = false,
-      ["<esc>"] = "close_window",
+      ['<esc>'] = 'close_window',
       ['c'] = {
         function(state)
           -- TODO: Find out the right way to get the relative path.
@@ -42,8 +42,8 @@ require('neo-tree').setup {
         -- TODO: Figure out how to specify the help text.
         -- desc = 'copy full path',
       },
-      ["K"] = "close_node",
-      -- ["J"] = "expand_all_nodes", -- This seems to be buggy at the moment.
+      ['K'] = 'close_node',
+      ['J'] = 'expand_all_nodes',
     },
   },
 }
