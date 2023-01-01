@@ -1,4 +1,12 @@
-require('neo-tree').setup {
+local has_neotree, neotree = pcall(require, "neo-tree")
+
+if not has_neotree then
+  vim.notify("neo-tree not found!")
+  return
+end
+
+
+neotree.setup {
   close_if_last_window = true,
   sort_case_insensitive = true,
   filesystem = {

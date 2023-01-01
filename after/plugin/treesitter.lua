@@ -1,5 +1,11 @@
--- See `:help nvim-treesitter`.
-require('nvim-treesitter.configs').setup {
+local has_ts_configs, ts_configs = pcall(require, "nvim-treesitter.configs")
+
+if not has_ts_configs then
+  vim.notify("nvim-treesitter.configs not found!")
+  return
+end
+
+ts_configs.setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 
     'bash',

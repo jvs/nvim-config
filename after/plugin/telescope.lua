@@ -1,5 +1,11 @@
--- See `:help telescope` and `:help telescope.setup()`
-require('telescope').setup {
+local has_telescope, telescope = pcall(require, "telescope")
+
+if not has_telescope then
+  vim.notify("telescope not found!")
+  return
+end
+
+telescope.setup {
   defaults = {
       sorting_strategy = 'ascending',
       layout_config = {
@@ -15,7 +21,7 @@ require('telescope').setup {
 }
 
 -- Enable telescope fzf native, if installed
-pcall(require('telescope').load_extension, 'fzf')
+pcall(telescope.load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
