@@ -85,6 +85,6 @@ rm nvim-macos.tar.gz
 
 ### To navivate the tree explorer:
   - Use "?" to see the mappings for the tree explorer.
-  - Use "q" or "<leader>t" to close the tree explorer.
+  - Use "q" or "<esc>" or "<leader>t" to close the tree explorer.
   - Use "C" to copy the full path of the selected file.
   - Use "c" to copy the relative path of the selected file.
