@@ -70,6 +70,17 @@ vim.keymap.set('i', ')', ')<c-g>u', {})
 vim.keymap.set('i', '<CR>', '<CR><c-g>u', {})
 
 
+-- Highlight on yank. (Not exactly a keymapping, but close enough.)
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
+
 -- When pasting over selected text, don't put the selected text in the register.
 vim.keymap.set('v', 'p', '"_dP', {})
 
