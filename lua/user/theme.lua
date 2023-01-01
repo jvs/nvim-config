@@ -24,7 +24,8 @@ require('lualine').setup {
       show_modified_status = false,
     }},
     lualine_x = {'filetype'},
-    lualine_z = {'location', get_time},
+    lualine_y = {'location'},
+    lualine_z = {get_time},
   },
 }
 
