@@ -1,10 +1,9 @@
 local has_zen_mode, zen_mode = pcall(require, "zen-mode")
 
 if not has_zen_mode then
+  vim.notify("zen-mode not found!")
   return
 end
-
--- local tz_colorcolumn
 
 zen_mode.setup {
   window = {
@@ -17,11 +16,4 @@ zen_mode.setup {
       colorcolumn = "",
     },
   },
-
-  -- on_open = function(win)
-   -- tz_colorcolumn = vim.o
-  -- end,
-
-  -- on_close = function(win)
-  -- end,
 }
