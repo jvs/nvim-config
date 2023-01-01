@@ -28,25 +28,6 @@ vim.keymap.set('n', '<A-Right>', ':vertical resize +2<CR>', {
 })
 
 
--- Show the tree with <leader>t.
-vim.keymap.set('n', '<leader>t', ':Neotree float reveal toggle<CR>', {
-  desc = 'Toggle [T]ree',
-})
-
-vim.keymap.set('n', '<leader>gb', ':Neotree float buffers toggle<CR>', {
-  desc = 'View current buffers as tree',
-})
-
-vim.keymap.set('n', '<leader>gs', ':Neotree float git_status toggle<CR>', {
-  desc = 'View [G]it [S]tatus as tree',
-})
-
--- Show the undo tree with ctrl+u.
-vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', {
-  desc = 'View [U]ndo tree.',
-})
-
-
 -- Toggle a floating terminal with ctrl+\.
 -- To toggle a specific terminal, press a number key and the ctrl+\ (e.g. 2<c-\>).
 -- Configured in user/toggleterm.lua.
@@ -149,3 +130,10 @@ map("<leader>h", "window_left")
 map("<leader>j", "window_down")
 map("<leader>k", "window_up")
 map("<leader>l", "window_right")
+
+-- Show the tree with <leader>t.
+map("<leader>t", "neotree_filesystem")
+map("<leader>b", "neotree_buffers")
+
+-- Show the undo tree with ctrl+u.
+map("<leader>u", "undotree")
