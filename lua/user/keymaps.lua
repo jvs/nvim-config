@@ -70,15 +70,6 @@ vim.keymap.set('i', ')', ')<c-g>u', {})
 vim.keymap.set('i', '<CR>', '<CR><c-g>u', {})
 
 
--- Move selected text up and down with alt+[jk].
--- vim.keymap.set('v', '<A-j>', ':m .+1<CR>==', {
---   desc = 'Move selected text down one line.',
--- })
--- vim.keymap.set('v', '<A-k>', ':m .-2<CR>==', {
---   desc = 'Move selected text up one line.',
--- })
-
-
 -- When pasting over selected text, don't put the selected text in the register.
 vim.keymap.set('v', 'p', '"_dP', {})
 
