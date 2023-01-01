@@ -37,13 +37,15 @@ vim.o.smartcase = true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Use the number column for diagnostics.
+vim.wo.signcolumn = 'number'
+
 -- vim.o.laststatus = 2
 -- vim.o.tabstop = 4
 -- vim.o.shiftwidth = 4
 -- vim.o.softtabstop = 4
 -- vim.opt.smartindent = true
 -- vim.o.undodir = '~/.nvim/undodir'
--- vim.wo.signcolumn = 'yes'
 -- wrapscan
 -- vim.opt.fileencoding = "utf-8"
 
