@@ -6,13 +6,25 @@ if not status_ok then
   return
 end
 
--- See `:help lualine.txt`
+
+local function get_time()
+  local time = os.date("*t")
+  return ("%02d:%02d"):format(time.hour, time.min)
+end
+
+
 require('lualine').setup {
   options = {
-    -- icons_enabled = true,
     theme = 'vscode',
-    -- component_separators = '|',
-    -- section_separators = '',
+  },
+  sections = {
+    lualine_c = {{
+      "filename",
+      path = 1,
+      show_modified_status = false,
+    }},
+    lualine_x = {'filetype'},
+    lualine_z = {'location', get_time},
   },
 }
 
