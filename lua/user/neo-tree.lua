@@ -11,6 +11,7 @@ require('neo-tree').setup {
     use_libuv_file_watcher = true,
   },
   window = {
+    position = 'float',
     mappings = {
       ['<space>'] = false,
       ["<esc>"] = "close_window",
