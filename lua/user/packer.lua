@@ -48,14 +48,6 @@ require('packer').startup(function(use)
   }
 
   -- LSP Configuration & Plugins
-  -- use {
-  --   'neovim/nvim-lspconfig',
-  --   requires = {
-  --     'williamboman/mason.nvim',
-  --     'williamboman/mason-lspconfig.nvim',
-  --     'folke/neodev.nvim',
-  --   },
-  -- }
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -63,24 +55,23 @@ require('packer').startup(function(use)
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
+      {'saadparwaiz1/cmp_luasnip'},
 
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},
-      {'saadparwaiz1/cmp_luasnip'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
 
       -- Snippets
-      -- {'L3MON4D3/LuaSnip'},
-      -- {'rafamadriz/friendly-snippets'},
+      {'L3MON4D3/LuaSnip'},
+      {'rafamadriz/friendly-snippets'},
 
       -- Neovim development
       {'folke/neodev.nvim'},
     }
   }
-
 
   -- VSCode Theme.
   use 'Mofiqul/vscode.nvim'
