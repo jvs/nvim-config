@@ -31,6 +31,8 @@ require('packer').startup(function(use)
   -- Package manager.
   use 'wbthomason/packer.nvim'
 
+  use 'nvim-tree/nvim-web-devicons'
+
   -- Highlight, edit, and navigate code.
   use { 
     'nvim-treesitter/nvim-treesitter',
