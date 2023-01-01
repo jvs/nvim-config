@@ -10,10 +10,11 @@ zen_mode.setup {
     backdrop = 1,
     width = 95,
     options = {
+      colorcolumn = "",
       cursorline = false,
       number = false,
       relativenumber = false,
-      colorcolumn = "",
+      signcolumn = "no",
     },
   },
 }
