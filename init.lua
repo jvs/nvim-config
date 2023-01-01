@@ -1,4 +1,4 @@
-require "system.plugins"
+require "user.packer"
 
 require "user.keymaps"
 require "user.options"
