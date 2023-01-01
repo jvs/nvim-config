@@ -108,7 +108,7 @@ require('packer').startup(function(use)
   }
 
   use 'mbbill/undotree'
-  use 'Pocco81/true-zen.nvim'
+  use 'folke/zen-mode.nvim'
 
   -- Command palette.
   use {
