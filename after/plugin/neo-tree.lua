@@ -5,8 +5,7 @@ if not has_neotree then
   return
 end
 
-
-neotree.setup {
+neotree.setup({
   close_if_last_window = true,
   enable_git_status = true,
   enable_diagnostics = true,
@@ -24,16 +23,16 @@ neotree.setup {
     git_status = {
       symbols = {
         -- Change type
-        added     = "✚",
-        deleted   = "✖",
-        modified  = "",
-        renamed   = "",
+        added = "✚",
+        deleted = "✖",
+        modified = "",
+        renamed = "",
         -- Status type
         untracked = "",
-        ignored   = "",
-        unstaged  = "",
-        staged    = "",
-        conflict  = "",
+        ignored = "",
+        unstaged = "",
+        staged = "",
+        conflict = "",
       },
     },
   },
@@ -45,7 +44,7 @@ neotree.setup {
       ["c"] = {
         function(state)
           -- TODO: Find out the right way to get the relative path.
-          local rootpath = state.path;
+          local rootpath = state.path
           local fullpath = state.tree:get_node():get_id()
           local is_relative = (fullpath:find(rootpath, 1, true) == 1)
           local relpath
@@ -73,4 +72,4 @@ neotree.setup {
       ["J"] = "expand_all_nodes",
     },
   },
-}
+})

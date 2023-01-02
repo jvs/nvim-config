@@ -5,13 +5,12 @@ if not has_lualine then
   return
 end
 
-
 local function get_time()
   local time = os.date("*t")
   return (" %02d:%02d"):format(time.hour, time.min)
 end
 
-lualine.setup {
+lualine.setup({
   options = {
     theme = "vscode",
   },
@@ -25,4 +24,4 @@ lualine.setup {
     lualine_y = { "location" },
     lualine_z = { get_time },
   },
-}
+})

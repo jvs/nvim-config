@@ -5,7 +5,7 @@ if not has_ts_configs then
   return
 end
 
-ts_configs.setup {
+ts_configs.setup({
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = {
     "bash",
@@ -84,5 +84,4 @@ ts_configs.setup {
       },
     },
   },
-}
-
+})

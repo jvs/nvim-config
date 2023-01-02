@@ -73,6 +73,9 @@ require('packer').startup(function(use)
     }
   }
 
+  -- Formatters
+  use 'mhartington/formatter.nvim'
+
   -- VSCode Theme.
   use 'Mofiqul/vscode.nvim'
 

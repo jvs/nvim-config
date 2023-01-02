@@ -5,7 +5,7 @@ if not has_zen_mode then
   return
 end
 
-zen_mode.setup {
+zen_mode.setup({
   window = {
     backdrop = 1,
     width = 95,
@@ -17,4 +17,4 @@ zen_mode.setup {
       signcolumn = "no",
     },
   },
-}
+})
