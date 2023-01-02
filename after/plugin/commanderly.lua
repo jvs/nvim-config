@@ -11,12 +11,18 @@ commanderly.add_commands({
     title = "Install New Plugins",
     desc = "Source packer.lua and install any new plugins.",
     alias = "source ~/.config/nvim/lua/user/packer.lua | PackerInstall",
-    keywords = "packer",
+    keywords = "packer install",
+  },
+  {
+    title = "Remove Plugins",
+    desc = "Source packer.lua and remove any deleted plugins.",
+    alias = "source ~/.config/nvim/lua/user/packer.lua | PackerClean",
+    keywords = "packer clean",
   },
   {
     title = "Update Plugins",
     desc = "Source packer.lua and install any new plugins.",
     alias = "source ~/.config/nvim/lua/user/packer.lua | PackerSync",
-    keywords = "packer upgrade update sync",
+    keywords = "packer sync upgrade update",
   },
 })
