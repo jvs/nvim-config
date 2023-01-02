@@ -14,10 +14,10 @@ neotree.setup {
   filesystem = {
     filtered_items = {
       always_show = {
-        '.gitignore',
+        ".gitignore",
       },
     },
-    hijack_netrw_behavior = 'open_default',
+    hijack_netrw_behavior = "open_default",
     use_libuv_file_watcher = true,
   },
   default_component_configs = {
@@ -38,11 +38,11 @@ neotree.setup {
     },
   },
   window = {
-    position = 'float',
+    position = "float",
     mappings = {
-      ['<space>'] = false,
-      ['<esc>'] = 'close_window',
-      ['c'] = {
+      ["<space>"] = false,
+      ["<esc>"] = "close_window",
+      ["c"] = {
         function(state)
           -- TODO: Find out the right way to get the relative path.
           local rootpath = state.path;
@@ -54,23 +54,23 @@ neotree.setup {
           else
             relpath = fullpath
           end
-          vim.fn.setreg('+', relpath)
+          vim.fn.setreg("+", relpath)
           print('Copied "' .. relpath .. '" to the clipboard.')
         end,
         -- TODO: Figure out how to specify the help text.
-        -- desc = 'copy relative path',
+        -- desc = "copy relative path",
       },
-      ['C'] = {
+      ["C"] = {
         function(state)
           local fullpath = state.tree:get_node():get_id()
-          vim.fn.setreg('+', fullpath)
+          vim.fn.setreg("+", fullpath)
           print('Copied "' .. fullpath .. '" to the clipboard.')
         end,
         -- TODO: Figure out how to specify the help text.
-        -- desc = 'copy full path',
+        -- desc = "copy full path",
       },
-      ['K'] = 'close_node',
-      ['J'] = 'expand_all_nodes',
+      ["K"] = "close_node",
+      ["J"] = "expand_all_nodes",
     },
   },
 }

@@ -11,20 +11,18 @@ local function get_time()
   return (" %02d:%02d"):format(time.hour, time.min)
 end
 
-
 lualine.setup {
   options = {
     theme = "vscode",
   },
   sections = {
-    lualine_c = {{
+    lualine_c = { {
       "filename",
       path = 1,
       show_modified_status = false,
-    }},
-    lualine_x = {"filetype"},
-    lualine_y = {"location"},
-    lualine_z = {get_time},
+    } },
+    lualine_x = { "filetype" },
+    lualine_y = { "location" },
+    lualine_z = { get_time },
   },
 }
-

@@ -6,6 +6,6 @@ if not has_toggleterm then
 end
 
 toggleterm.setup({
-  direction = 'float',
+  direction = "float",
   open_mapping = [[<c-\>]],
 })
