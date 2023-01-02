@@ -82,7 +82,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 
 -- When pasting over selected text, don't put the selected text in the register.
-vim.keymap.set('v', 'p', '"_dP', {})
+-- vim.keymap.set('v', 'p', '"_dP', {})
 
 
 -- Cut, copy, and paste using the clipboard.

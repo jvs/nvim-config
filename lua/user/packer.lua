@@ -16,7 +16,7 @@ if not status_ok then
 end
 
 
--- Have packer use a popup window
+-- Have packer use a popup window.
 packer.init {
   display = {
     open_fn = function()
@@ -49,32 +49,45 @@ require('packer').startup(function(use)
 
   -- LSP Configuration & Plugins
   use {
-    'VonHeikemen/lsp-zero.nvim',
+    'neovim/nvim-lspconfig',
     requires = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
-
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
-      {'saadparwaiz1/cmp_luasnip'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-nvim-lua'},
-
-      -- Snippets
-      {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'},
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
 
       -- Neovim development
-      {'folke/neodev.nvim'},
-    }
+      'folke/neodev.nvim',
+    },
   }
 
+  -- LSP Configuration & Plugins
+  -- use {
+  --   'VonHeikemen/lsp-zero.nvim',
+  --   requires = {
+  --     -- LSP Support
+  --     {'neovim/nvim-lspconfig'},
+  --     {'williamboman/mason.nvim'},
+  --     {'williamboman/mason-lspconfig.nvim'},
+  --
+  --     -- Autocompletion
+  --     {'hrsh7th/nvim-cmp'},
+  --     {'hrsh7th/cmp-buffer'},
+  --     {'hrsh7th/cmp-path'},
+  --     {'saadparwaiz1/cmp_luasnip'},
+  --     {'hrsh7th/cmp-nvim-lsp'},
+  --     {'hrsh7th/cmp-nvim-lua'},
+  --
+  --     -- Snippets
+  --     {'L3MON4D3/LuaSnip'},
+  --     {'rafamadriz/friendly-snippets'},
+  --
+  --     -- Neovim development
+  --     {'folke/neodev.nvim'},
+  --   }
+  -- }
+
   -- Formatters
-  use 'mhartington/formatter.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- VSCode Theme.
   use 'Mofiqul/vscode.nvim'
@@ -175,22 +188,3 @@ if is_bootstrap then
   print '=================================='
   return
 end
-
-
--- Automatically run :PackerCompile whenever plugins.lua is updated.
--- vim.cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
---   augroup end
--- ]])
-
-
--- Temporary:
-vim.opt.runtimepath:append("~/github/jvs/commanderly.nvim")
-require('commanderly').setup()
-
-
--- Temporary:
--- require('neodev').setup()
--- require('mason').setup()
