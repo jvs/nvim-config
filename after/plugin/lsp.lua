@@ -1,4 +1,12 @@
-local on_attach = function(_, bufnr) end
+local on_attach = function(client, bufnr)
+  local has_keymaps, keymaps = pcall(require, "user.keymaps")
+
+  if has_keymaps and keymaps.on_attach then
+    keymaps.on_attach(client, bufnr)
+  else
+    vim.notify("user.keymaps not found!")
+  end
+end
 
 local icons = {
   Error = "✘",
