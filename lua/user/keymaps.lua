@@ -37,7 +37,7 @@ vim.keymap.set({ 'i', 'n' }, '<C-j>', '<CMD>1ToggleTerm<CR>', { desc = 'Toggle t
 vim.keymap.set({ 'i', 'n' }, '<C-k>', '<CMD>2ToggleTerm<CR>', { desc = 'Toggle terminal-2.' })
 vim.keymap.set({ 'i', 'n' }, '<C-h>', '<CMD>3ToggleTerm<CR>', { desc = 'Toggle terminal-3.' })
 
-function _switch_terminals(target_terminal)
+local function switch_terminals(target_terminal)
   local current_buf = vim.api.nvim_get_current_buf()
   local current_terminal = vim.api.nvim_buf_get_var(current_buf, 'toggle_number')
   vim.cmd('ToggleTerm')
@@ -52,13 +52,13 @@ function _switch_terminals(target_terminal)
 end
 
 -- Toggle terminals from terminal mode.
-vim.keymap.set('t', '<C-j>', '<CMD>lua _switch_terminals(1)<CR>',
+vim.keymap.set('t', '<C-j>', function() switch_terminals(1) end,
   { desc = 'Toggle terminal-1.', noremap = true })
 
-vim.keymap.set('t', '<C-k>', '<CMD>lua _switch_terminals(2)<CR>',
+vim.keymap.set('t', '<C-k>', function() switch_terminals(2) end,
   { desc = 'Toggle terminal-2.', noremap = true })
 
-vim.keymap.set('t', '<C-h>', '<CMD>lua _switch_terminals(3)<CR>',
+vim.keymap.set('t', '<C-h>', function() switch_terminals(3) end,
   { desc = 'Toggle terminal-3.', noremap = true })
 
 
