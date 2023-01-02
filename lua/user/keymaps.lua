@@ -148,7 +148,8 @@ map("<leader>f", "telescope_live_grep")
 map("<leader>8", "telescope_grep_string")
 map("<leader>/", "telescope_current_buffer_fuzzy_find")
 
--- This function is called by after/plugin/lsp.lua.
+-- LSP commands.
+-- (This function is called by after/plugin/lsp.lua.)
 function M.on_attach(_, bufnr)
   local opts = { buffer = bufnr, remap = false }
 
