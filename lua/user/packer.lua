@@ -136,6 +136,12 @@ require('packer').startup(function(use)
     end,
   }
 
+  -- Multiple cursors.
+  use {
+    'mg979/vim-visual-multi',
+    branch = 'master',
+  }
+
   use 'mbbill/undotree'
   use 'folke/zen-mode.nvim'
 
