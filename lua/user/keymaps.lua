@@ -139,3 +139,9 @@ map("<leader>b", "neotree_buffers")
 
 -- Show the undo tree with ctrl+u.
 map("<leader>u", "undotree")
+
+-- Telescope commands.
+map("<leader>p", "telescope_find_files")
+map("<leader>f", "telescope_live_grep")
+map("<leader>8", "telescope_grep_string")
+map("<leader>/", "telescope_current_buffer_fuzzy_find")
