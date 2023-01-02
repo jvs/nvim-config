@@ -8,6 +8,8 @@ end
 
 neotree.setup {
   close_if_last_window = true,
+  enable_git_status = true,
+  enable_diagnostics = true,
   sort_case_insensitive = true,
   filesystem = {
     filtered_items = {
@@ -17,6 +19,23 @@ neotree.setup {
     },
     hijack_netrw_behavior = 'open_default',
     use_libuv_file_watcher = true,
+  },
+  default_component_configs = {
+    git_status = {
+      symbols = {
+        -- Change type
+        added     = "✚",
+        deleted   = "✖",
+        modified  = "",
+        renamed   = "",
+        -- Status type
+        untracked = "",
+        ignored   = "",
+        unstaged  = "",
+        staged    = "",
+        conflict  = "",
+      },
+    },
   },
   window = {
     position = 'float',
