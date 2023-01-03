@@ -126,8 +126,11 @@ map("<leader>\\", "vertical_split")
 map("<leader>-", "horizontal_split")
 
 -- Cycle through buffers with shift+h and shift+l.
-map("<S-l>", "next_buffer")
-map("<S-h>", "previous_buffer")
+map("<S-h>", "split_personality_previous")
+map("<S-l>", "split_personality_next")
+
+-- Close buffers with <leader>q.
+map("<leader>q", "split_personality_close")
 
 -- Move between splits/windows.
 map("<leader>h", "window_left")
