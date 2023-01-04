@@ -146,6 +146,7 @@ map("<leader>b", "neotree_buffers")
 map("<leader>u", "undotree")
 
 -- Telescope commands.
+map("<leader>r", "telescope_git_files")
 map("<leader>p", "telescope_find_files")
 map("<leader>f", "telescope_live_grep")
 map("<leader>8", "telescope_grep_string")
