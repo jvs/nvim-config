@@ -3,8 +3,6 @@ if not has_commanderly then
   vim.notify("commanderly not found!")
 end
 
-commanderly.setup()
-
 commanderly.add_commands({
   -- Packer Commands.
   {
