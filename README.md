@@ -7,13 +7,19 @@ My Neovim configuration.
 
 ```bash
 git clone https://github.com/jvs/nvim-config.git ~/.config/nvim
-nvim --headless +"silent! PlugInstall" +qall
 ```
 
-When you first run `nvim`, the treesitter plugin will start downloading and
-building a bunch of parsers in the background.
+Then in nvim:
+```
+:source ~/.config/nvim/lua/user/packer.lua
+:PackerSync
+```
 
-Run the commands `:checkhealth` and `:PlugStatus` to make sure everything is OK.
+Wait for Packer to finish, and then restart nvim. Then wait for Treesitter to
+finish downloading grammars.
+
+Run the commands `:checkhealth` and `:PackerCompile` and then `:PackerStatus`
+to make sure everything is OK.
 
 
 ## Requirements
@@ -63,3 +69,29 @@ sudo ln -sf /usr/local/bin/nvim-osx64/bin/nvim /usr/local/bin/nvim
 # Cleanup.
 rm nvim-macos.tar.gz
 ```
+
+## Mappings
+
+Use `<space><space>` to open a command palette.
+
+
+### To toggle the floating terminal windows:
+  - Use `ctrl+\` to toggle terminal 1, or to close the current terminal.
+  - Use any digit plus `ctrl+\` to open that terminal.
+  - For example, press `2,ctrl+\` to open terminal 2.
+  - Use `ctr+j` to open or close terminal 1.
+  - Use `ctr+k` to open or close terminal 2.
+  - Use `ctr+h` to open or close terminal 3.
+  - The `ctrl+[hjk]` chord may be used to switch between the terminals.
+
+
+### To open the tree explorer:
+  - Use `<leader>t` to view the file system
+  - Use `<leader>b` to view the buffers
+
+
+### To navivate the tree explorer:
+  - Use "?" to see the mappings for the tree explorer.
+  - Use "q" or "<esc>" or "<leader>t" to close the tree explorer.
+  - Use "C" to copy the full path of the selected file.
+  - Use "c" to copy the relative path of the selected file.
