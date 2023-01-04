@@ -7,11 +7,16 @@ My Neovim configuration.
 
 ```bash
 git clone https://github.com/jvs/nvim-config.git ~/.config/nvim
-nvim --headless +"silent! PackerSync" +qall
 ```
 
-When you first run `nvim`, the treesitter plugin will start downloading and
-building a bunch of parsers in the background.
+Then in nvim:
+```
+:source ~/.config/nvim/lua/user/packer.lua
+:PackerSync
+```
+
+Wait for Packer to finish, and then restart nvim. Then wait for Treesitter to
+finish downloading grammars.
 
 Run the commands `:checkhealth` and `:PackerCompile` and then `:PackerStatus`
 to make sure everything is OK.
@@ -67,6 +72,9 @@ rm nvim-macos.tar.gz
 
 ## Mappings
 
+Use `<space><space>` to open a command palette.
+
+
 ### To toggle the floating terminal windows:
   - Use `ctrl+\` to toggle terminal 1, or to close the current terminal.
   - Use any digit plus `ctrl+\` to open that terminal.
@@ -80,7 +88,6 @@ rm nvim-macos.tar.gz
 ### To open the tree explorer:
   - Use `<leader>t` to view the file system
   - Use `<leader>b` to view the buffers
-  - Use `<leader>gs` to view the git status
 
 
 ### To navivate the tree explorer:
