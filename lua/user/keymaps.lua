@@ -45,11 +45,7 @@ local function switch_terminals(target_terminal)
   vim.cmd('ToggleTerm')
 
   if current_terminal ~= target_terminal then
-    -- TODO: Figure out how to jump between terminals without leaving insert-mode
-    -- in the destination terminal. For now, adding a delay seems to work.
-    vim.defer_fn(function()
-      vim.cmd(target_terminal .. 'ToggleTerm')
-    end, 50)
+    vim.schedule_wrap(vim.cmd)(target_terminal .. 'ToggleTerm')
   end
 end
 
