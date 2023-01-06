@@ -84,7 +84,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 
 -- When pasting over selected text, don't put the selected text in the register.
--- vim.keymap.set('v', 'p', '"_dP', {})
+-- The problem with `vim.keymap.set('v', 'p', '"_dP', {})` is that it doesn't
+-- work correctly when pasting over the last work on a line. It removes the
+-- space before the word.
+local function paste_over()
+  -- Get the value of the yank register.
+  local yanked = vim.fn.getreg('"')
+
+  -- Execute the paste operation as normal.
+  vim.api.nvim_feedkeys('p', 'n', false)
+
+  -- Resore the value of the yank register. (For some reason, there needs to be
+  -- a delay here in order to make this work.)
+  vim.defer_fn(function() vim.fn.setreg('', yanked) end, 1)
+end
+
+vim.keymap.set('v', 'p', paste_over, {})
 
 
 -- Cut, copy, and paste using the clipboard.
