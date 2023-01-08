@@ -12,7 +12,7 @@ end
 
 lualine.setup({
   options = {
-    theme = "vscode",
+    theme = "auto",
   },
   sections = {
     lualine_c = { {

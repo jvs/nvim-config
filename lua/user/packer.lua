@@ -60,8 +60,9 @@ require('packer').startup(function(use)
     },
   }
 
-  -- VSCode Theme.
+  -- Themes.
   use 'Mofiqul/vscode.nvim'
+  use 'EdenEast/nightfox.nvim'
 
   -- Status line.
   use {
