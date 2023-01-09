@@ -128,6 +128,12 @@ require('packer').startup(function(use)
     branch = 'master',
   }
 
+  -- Automatic highlighting.
+  use 'RRethy/vim-illuminate'
+
+  -- On-screen navigation.
+  use 'ggandor/leap.nvim'
+
   use 'mbbill/undotree'
   use 'folke/zen-mode.nvim'
 
