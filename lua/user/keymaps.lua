@@ -144,6 +144,9 @@ map("<leader>-", "horizontal_split")
 map("<S-h>", "split_personality_previous")
 map("<S-l>", "split_personality_next")
 
+-- Switch between buffers with <leader><tab>.
+map("<leader><tab>", "split_personality_show_switcher")
+
 -- Close buffers with <leader>q.
 map("<leader>q", "split_personality_close")
 
