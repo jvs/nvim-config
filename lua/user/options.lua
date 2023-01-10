@@ -40,13 +40,15 @@ vim.wo.relativenumber = true
 -- Use the number column for diagnostics.
 vim.wo.signcolumn = 'number'
 
+vim.o.autoread = true
+
 -- auto-reload files when modified externally
 -- https://unix.stackexchange.com/a/383044
-vim.o.autoread = true
-vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-  command = "if mode() != 'c' | checktime | endif",
-  pattern = { "*" },
-})
+-- This breaks the command-line window:
+-- vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+--   command = "if mode() != 'c' | checktime | endif",
+--   pattern = { "*" },
+-- })
 
 -- vim.o.laststatus = 2
 -- vim.o.tabstop = 4
