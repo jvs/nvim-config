@@ -63,7 +63,11 @@ require('packer').startup(function(use)
   -- Themes.
   use 'Mofiqul/vscode.nvim'
   use 'EdenEast/nightfox.nvim'
-  use { 'ramojus/mellifluous.nvim', requires = { 'rktjmp/lush.nvim' } }
+  use { 'ramojus/mellifluous.nvim', requires = 'rktjmp/lush.nvim' }
+  use { 'mcchrish/zenbones.nvim', requires = 'rktjmp/lush.nvim' }
+  use 'hardselius/warlock'
+  use 'kvrohit/rasmus.nvim'
+
 
   -- Status line.
   use {
