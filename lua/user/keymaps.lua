@@ -120,8 +120,8 @@ vim.keymap.set('n', '<leader>v', '"*p', {
 
 
 -- Stay in indent mode while changing indentation.
-vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
-vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
+-- vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
+-- vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 
 
 local has_commanderly, commanderly = pcall(require, "commanderly")
