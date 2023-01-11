@@ -133,6 +133,7 @@ end
 
 vim.keymap.set('n', '<leader><leader>', commanderly.open, { desc = 'Open command palette' })
 
+
 -- Create keymaps for commanderly commands.
 local map = commanderly.map
 
@@ -144,7 +145,8 @@ map("<leader>-", "horizontal_split")
 map("<S-h>", "split_personality_previous")
 map("<S-l>", "split_personality_next")
 
--- Switch between buffers with <leader><tab>.
+-- Switch between buffers with <leader>e or <leader><tab>.
+map("<leader>e", "split_personality_show_switcher")
 map("<leader><tab>", "split_personality_show_switcher")
 
 -- Close buffers with <leader>q.

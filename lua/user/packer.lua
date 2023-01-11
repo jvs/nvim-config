@@ -67,6 +67,7 @@ require('packer').startup(function(use)
   use { 'mcchrish/zenbones.nvim', requires = 'rktjmp/lush.nvim' }
   use 'hardselius/warlock'
   use 'kvrohit/rasmus.nvim'
+  use 'savq/melange'
 
 
   -- Status line.
