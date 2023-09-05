@@ -16,7 +16,7 @@ ts_configs.setup({
     "gitcommit",
     "gitignore",
     "go",
-    "help",
+    -- "help",
     "java",
     "lua",
     "markdown",
