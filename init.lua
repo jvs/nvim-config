@@ -137,6 +137,12 @@ require('lazy').setup({
   -- Themes
   'Mofiqul/vscode.nvim',
   'EdenEast/nightfox.nvim',
+
+  -- Compatibility
+  {
+    'ojroques/nvim-osc52',
+    enabled = os.getenv("USING_WINTERM") ~= nil,
+  },
 }, {})
 
 
