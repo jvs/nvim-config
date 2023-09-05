@@ -1,7 +1,5 @@
 local M = {}
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { noremap = true, silent = true })
 
 
