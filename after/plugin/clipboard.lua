@@ -1,7 +1,7 @@
 local using_winterm = os.getenv("USING_WINTERM") ~= nil
 
 -- If we're not using Windows Terminal, then skip configuring OSC52.
-if using_winterm then
+if not using_winterm then
   return
 end
 
