@@ -31,14 +31,14 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
-  sumneko_lua = {
-    Lua = {
-      -- Fix Undefined global "vim".
-      diagnostics = { globals = { "vim" } },
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
+  -- lua_ls = {
+  --   Lua = {
+  --     -- Fix Undefined global "vim".
+  --     diagnostics = { globals = { "vim" } },
+  --     workspace = { checkThirdParty = false },
+  --     telemetry = { enable = false },
+  --   },
+  -- },
 }
 
 local has_neodev, neodev = pcall(require, "neodev")
