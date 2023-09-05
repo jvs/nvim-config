@@ -102,6 +102,7 @@ require('lazy').setup({
   {
     'akinsho/toggleterm.nvim',
     version = "*",
+    lazy = false,
     opts = {
       direction = "float",
       open_mapping = [[<c-\>]],
