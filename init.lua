@@ -99,7 +99,14 @@ require('lazy').setup({
   },
 
   -- Terminal windows.
-  {'akinsho/toggleterm.nvim', version = "*", config = true},
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    opts = {
+      direction = "float",
+      open_mapping = [[<c-\>]],
+    },
+  },
 
   -- Tree explorer.
   {
