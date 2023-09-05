@@ -122,7 +122,8 @@ require('lazy').setup({
     'jvs/commanderly.nvim',
     dependencies = {
       'nvim-telescope/telescope.nvim',
-    }
+    },
+    config = true,
   },
 
   -- Themes
