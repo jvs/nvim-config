@@ -143,20 +143,21 @@ require('packer').startup(function(use)
   use 'folke/zen-mode.nvim'
 
   -- Command palette.
-  use {
-    'jvs/commanderly.nvim',
-    requires = { 'nvim-telescope/telescope.nvim' },
-    config = function()
-      require('commanderly').setup()
-    end,
-  }
+  -- use {
+  --   'jvs/commanderly.nvim',
+  --   requires = { 'nvim-telescope/telescope.nvim' },
+  --   config = function()
+  --     require('commanderly').setup()
+  --   end,
+  -- }
 
-  use {
-    'jvs/split-personality.nvim',
-    config = function()
-      require('split-personality').setup()
-    end,
-  }
+  -- use {
+  --   'jvs/split-personality.nvim',
+  --   config = function()
+  --     require('split-personality').setup()
+  --   end,
+  -- }
+  --
 
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua

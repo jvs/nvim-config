@@ -1,16 +1,16 @@
 local M = {}
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { noremap = true, silent = true })
 
 
--- Toggle comments with <leader>`.
-vim.keymap.set('n', '<leader>`',
+-- Toggle comments with ctrl+/.
+local comment_key = os.getenv("USING_WINTERM") and '<C-_>' or '<C-/>'
+
+vim.keymap.set('n', comment_key,
   function() require("Comment.api").toggle.linewise.current() end,
   { desc = 'Comment or uncomment line.' })
 
-vim.keymap.set('v', '<leader>`',
+vim.keymap.set('v', comment_key,
   '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
   { desc = 'Comment or uncomment lines.' })
 
