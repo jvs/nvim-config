@@ -27,6 +27,11 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically.
   'tpope/vim-sleuth',
 
+  -- Database plugins.
+  'tpope/vim-dadbod',
+  'kristijanhusak/vim-dadbod-ui',
+  'kristijanhusak/vim-dadbod-completion',
+
   -- LSP Configuration & Plugins
   {
     'neovim/nvim-lspconfig',
