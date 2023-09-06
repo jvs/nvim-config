@@ -21,10 +21,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local using_winterm = os.getenv('USING_WINTERM') ~= nil
-local using_tmux = os.getenv("TMUX") ~= nil
 
 
 require('lazy').setup({
+  'nvim-tree/nvim-web-devicons',
+
   -- Detect tabstop and shiftwidth automatically.
   'tpope/vim-sleuth',
 
@@ -32,12 +33,6 @@ require('lazy').setup({
   'tpope/vim-dadbod',
   'kristijanhusak/vim-dadbod-ui',
   'kristijanhusak/vim-dadbod-completion',
-
-  {
-    'nvim-tree/nvim-web-devicons',
-    -- For now, don't try to use the devicons with Windows Terminal and tmux.
-    enabled = not using_winterm or not using_tmux,
-  },
 
 
   -- LSP Configuration & Plugins
@@ -159,9 +154,6 @@ require('lazy').setup({
       --   If not available, we use `mini` as the fallback
       'rcarriga/nvim-notify',
     },
-
-    -- For now, don't try to use noice with Windows Terminal and tmux.
-    enabled = not using_winterm or not using_tmux,
   },
 
 
