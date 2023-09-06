@@ -9,17 +9,10 @@ My Neovim configuration.
 git clone https://github.com/jvs/nvim-config.git ~/.config/nvim
 ```
 
-Then in nvim:
-```
-:source ~/.config/nvim/lua/user/packer.lua
-:PackerSync
-```
+Then start nvim, let it download all the plugins and grammars, and then restart
+nvim.
 
-Wait for Packer to finish, and then restart nvim. Then wait for Treesitter to
-finish downloading grammars.
-
-Run the commands `:checkhealth` and `:PackerCompile` and then `:PackerStatus`
-to make sure everything is OK.
+Run the commands `:checkhealth` and `:Lazy` to make sure everything is OK.
 
 
 ## Requirements
@@ -86,11 +79,12 @@ Use `<space><space>` to open a command palette.
 
 
 ### To open the tree explorer:
-  - Use `<leader>t` to view the file system
-  - Use `<leader>b` to view the buffers
+  - Use `<leader>t` to view the file system.
+  - Use `<leader>b` to view the buffers.
 
 
 ### To navivate the tree explorer:
+  - Open the tree explorer with `<leader>t`.
   - Use "?" to see the mappings for the tree explorer.
   - Use "q" or "<esc>" or "<leader>t" to close the tree explorer.
   - Use "C" to copy the full path of the selected file.
