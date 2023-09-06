@@ -31,7 +31,7 @@ require('lazy').setup({
 
   -- Database plugins.
   'tpope/vim-dadbod',
-  'kristijanhusak/vim-dadbod-ui',
+  -- 'kristijanhusak/vim-dadbod-ui',
   'kristijanhusak/vim-dadbod-completion',
 
 
