@@ -7,7 +7,7 @@ end
 
 local function get_time()
   local time = os.date("*t")
-  return (" %02d:%02d"):format(time.hour, time.min)
+  return ("🕑 %02d:%02d"):format(time.hour, time.min)
 end
 
 lualine.setup({
