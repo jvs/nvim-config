@@ -94,7 +94,14 @@ require('lazy').setup({
   {
     'Pocco81/auto-save.nvim',
     opts = {
-        debounce_delay = 500,
+      debounce_delay = 500,
+      execution_message = {
+        message = function()
+          return ""
+        end,
+        dim = 0.18,
+        cleaning_interval = 1250,
+      },
     },
   },
 
@@ -123,6 +130,24 @@ require('lazy').setup({
   'folke/zen-mode.nvim',
   'mbbill/undotree',
   'RRethy/vim-illuminate',
+
+  -- lazy.nvim
+  {
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      'MunifTanjim/nui.nvim',
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      'rcarriga/nvim-notify',
+    },
+  },
+
 
   'jvs/split-personality.nvim',
 
