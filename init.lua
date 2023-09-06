@@ -171,7 +171,13 @@ require('lazy').setup({
   'Mofiqul/vscode.nvim',
   'EdenEast/nightfox.nvim',
 
-  -- Clipboard for Windows Terminal.
+  -- Copilot
+  {
+    'github/copilot.vim',
+    enabled = using_winterm,
+  },
+
+  -- Clipboard (for Windows Terminal)
   {
     'ojroques/nvim-osc52',
     enabled = using_winterm,
