@@ -5,9 +5,15 @@ if not has_lualine then
   return
 end
 
-local function get_time()
-  local time = os.date("*t")
-  return ("🕑 %02d:%02d"):format(time.hour, time.min)
+local has_noice, noice = pcall(require, "noice")
+local lualine_x = {}
+
+if has_noice then
+  lualine_x = { {
+      noice.api.status.mode.get,
+      cond = noice.api.status.mode.has,
+      color = { fg = "#ff9e64" },
+  } }
 end
 
 lualine.setup({
@@ -20,8 +26,8 @@ lualine.setup({
       path = 1,
       show_modified_status = false,
     } },
-    lualine_x = { "filetype" },
-    lualine_y = { "location" },
-    lualine_z = { get_time },
+    lualine_x = lualine_x,
+    lualine_y = { "filetype" },
+    lualine_z = { "location" },
   },
 })
