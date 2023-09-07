@@ -5,16 +5,26 @@ if not has_lualine then
   return
 end
 
+-- Show "recording" status.
 local has_noice, noice = pcall(require, "noice")
-local lualine_x = {}
+local recording = {}
 
 if has_noice then
-  lualine_x = { {
+  recording = {
       noice.api.status.mode.get,
       cond = noice.api.status.mode.has,
       color = { fg = "#ff9e64" },
-  } }
+  }
 end
+
+
+-- Show git blame.
+local has_gitblame, gitblame = pcall(require, "gitblame")
+local blame = {}
+if has_gitblame then
+  blame = { gitblame.get_current_blame_text, cond = gitblame.is_blame_text_available }
+end
+
 
 lualine.setup({
   options = {
@@ -26,7 +36,7 @@ lualine.setup({
       path = 1,
       show_modified_status = false,
     } },
-    lualine_x = lualine_x,
+    lualine_x = { blame, recording },
     lualine_y = { "filetype" },
     lualine_z = { "location" },
   },

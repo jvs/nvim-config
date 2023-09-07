@@ -139,7 +139,6 @@ require('lazy').setup({
   'mbbill/undotree',
   'RRethy/vim-illuminate',
 
-  -- lazy.nvim
   {
     'folke/noice.nvim',
     event = 'VeryLazy',
@@ -153,6 +152,14 @@ require('lazy').setup({
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
       'rcarriga/nvim-notify',
+    },
+  },
+
+  {
+    'f-person/git-blame.nvim',
+    opts = {
+      date_format = '%r',
+      display_virtual_text = 0,
     },
   },
 
