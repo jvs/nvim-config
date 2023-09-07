@@ -7,6 +7,7 @@ vim.opt.timeoutlen = 2000
 vim.opt.sidescrolloff = 8
 vim.opt.cursorline = true
 vim.opt.exrc = true
+vim.opt.smartindent = false
 
 vim.o.autoindent = true
 vim.o.autowrite = true
