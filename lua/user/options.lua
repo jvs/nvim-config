@@ -41,8 +41,11 @@ vim.o.smartcase = true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Use the number column for diagnostics.
-vim.wo.signcolumn = 'number'
+-- Use the line number column for diagnostics.
+-- vim.wo.signcolumn = 'number'
+
+-- Show diagnostics to the left of the line numbers.
+vim.wo.signcolumn = 'auto:3'
 
 vim.o.autoread = true
 
