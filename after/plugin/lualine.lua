@@ -45,13 +45,13 @@ local fullpath = {
   shorting_target = 0,
 }
 
-local filename = {
-  "filename",
-  path = 0,
-  file_status = false,
-  shorting_target = 0,
-  separator = {left = '', right = ''},
-}
+-- local filename = {
+--   "filename",
+--   path = 0,
+--   file_status = false,
+--   shorting_target = 0,
+--   separator = {left = '', right = ''},
+-- }
 
 local filetype = {'filetype', icon_only = true}
 
@@ -65,8 +65,8 @@ lualine.setup({
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff'},
-    lualine_c = {fullpath},
-    lualine_x = {blame, recording},
+    lualine_c = {blame},
+    lualine_x = {recording},
     lualine_y = {filetype, 'searchcount'},
     lualine_z = {'location'},
   },
@@ -81,8 +81,9 @@ lualine.setup({
 
   winbar = {
     lualine_a = {},
-    lualine_b = {filename},
-    lualine_c = {},
+    lualine_b = {},
+    -- lualine_b = {filename},
+    lualine_c = {fullpath},
     lualine_x = {{'diagnostics', draw_empty = true}},
     lualine_y = {},
     lualine_z = {}
