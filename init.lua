@@ -141,7 +141,15 @@ require('lazy').setup({
     'folke/noice.nvim',
     event = 'VeryLazy',
     opts = {
-      -- add any options here
+      routes = {
+        {
+          filter = {
+            event = "msg_show",
+            kind = "search_count",
+          },
+          opts = { skip = true },
+        },
+      },
     },
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
@@ -149,7 +157,7 @@ require('lazy').setup({
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
-      'rcarriga/nvim-notify',
+      -- 'rcarriga/nvim-notify',
     },
   },
 
@@ -161,6 +169,7 @@ require('lazy').setup({
     },
   },
 
+  'romainl/vim-cool',
 
   'jvs/split-personality.nvim',
 
