@@ -8,6 +8,8 @@ vim.opt.sidescrolloff = 8
 vim.opt.cursorline = true
 vim.opt.exrc = true
 vim.opt.smartindent = false
+vim.opt.laststatus = 3
+vim.opt.cmdheight = 0
 
 vim.o.autoindent = true
 vim.o.autowrite = true
@@ -16,6 +18,7 @@ vim.o.colorcolumn = '80,100'
 vim.o.expandtab = true
 vim.o.hidden = true
 vim.o.hlsearch = false
+-- vim.o.hlsearch = true
 vim.o.list = true
 vim.o.listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:␣,trail:·'
 vim.o.modeline = false
