@@ -64,7 +64,7 @@ lualine.setup({
   extensions = {'neo-tree', 'quickfix', 'toggleterm'},
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'diff', 'diagnostics'},
+    lualine_b = {'branch', 'diff'},
     lualine_c = {fullpath},
     lualine_x = {blame, recording},
     lualine_y = {filetype, 'searchcount'},
@@ -83,7 +83,7 @@ lualine.setup({
     lualine_a = {},
     lualine_b = {filename},
     lualine_c = {},
-    lualine_x = {'branch'},
+    lualine_x = {{'diagnostics', draw_empty = true}},
     lualine_y = {},
     lualine_z = {}
   },
