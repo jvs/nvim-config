@@ -11,10 +11,12 @@ local recording = {}
 
 if has_noice then
   local function has_recording_message()
-    return (
-      noice.api.status.mode.has() and
-      noice.api.status.mode.get() ~= "-- INSERT --"
-    )
+    if not noice.api.status.mode.has() then
+      return false
+    end
+
+    local message = noice.api.status.mode.get()
+    return message ~= nil and message:sub(1, 3) ~= '-- '
   end
 
   recording = {
