@@ -184,6 +184,7 @@ require('lazy').setup({
   -- Themes
   'Mofiqul/vscode.nvim',
   'EdenEast/nightfox.nvim',
+  { 'rose-pine/neovim', name = 'rose-pine' },
 
   -- Copilot
   {
