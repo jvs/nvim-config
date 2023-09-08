@@ -61,6 +61,7 @@ lualine.setup({
     theme = 'auto',
     globalstatus = true,
   },
+  extensions = {'neo-tree', 'quickfix', 'toggleterm'},
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'diff', 'diagnostics'},
