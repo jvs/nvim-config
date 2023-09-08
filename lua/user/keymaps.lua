@@ -166,11 +166,12 @@ map("<leader>b", "neotree_buffers")
 map("<leader>u", "undotree")
 
 -- Telescope commands.
-map("<leader>r", "telescope_git_files")
+map("<leader>o", "telescope_git_files")
 map("<leader>p", "telescope_find_files")
 map("<leader>f", "telescope_live_grep")
 map("<leader>8", "telescope_grep_string")
 map("<leader>/", "telescope_current_buffer_fuzzy_find")
+map("<leader>r", "telescope_resume")
 
 -- LSP commands.
 -- (This function is called by after/plugin/lsp.lua.)
