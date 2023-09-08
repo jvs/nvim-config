@@ -22,8 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local using_winterm = os.getenv('USING_WINTERM') ~= nil
 
-
-require('lazy').setup({
+local plugins = {
   'nvim-tree/nvim-web-devicons',
 
   -- Detect tabstop and shiftwidth automatically.
@@ -197,17 +196,18 @@ require('lazy').setup({
     'ojroques/nvim-osc52',
     enabled = using_winterm,
   },
-}, {})
+}
 
 
+local lazy_opts = {
+  dev = {
+    path = "~/github/jvs/nvim-plugins/",
+    patterns = {"jvs/"},
+    fallback = true,
+  },
+}
 
--- Temporary:
--- vim.opt.runtimepath:append("~/github/jvs/nvim-plugins/commanderly.nvim")
--- vim.opt.runtimepath:append("~/github/jvs/nvim-plugins/split-personality.nvim")
--- vim.opt.runtimepath:append("~/github/jvs/nvim-plugins/symbolism.nvim")
--- require('commanderly').setup()
--- require('split-personality').setup()
--- require('symbolism').setup()
+require('lazy').setup(plugins, lazy_opts)
 
 require "user.commands"
 require "user.keymaps"
