@@ -18,9 +18,9 @@ if has_noice then
   end
 
   recording = {
-      noice.api.status.mode.get,
-      cond = has_recording_message,
-      color = { fg = "#ff9e64" },
+    noice.api.status.mode.get,
+    cond = has_recording_message,
+    color = { fg = "#ff9e64" },
   }
 end
 
