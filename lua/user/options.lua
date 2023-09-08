@@ -45,7 +45,8 @@ vim.wo.relativenumber = true
 -- vim.wo.signcolumn = 'number'
 
 -- Show diagnostics to the left of the line numbers.
-vim.wo.signcolumn = 'auto:3'
+vim.wo.signcolumn = 'yes:1'
+-- vim.wo.signcolumn = 'auto:1'
 
 vim.o.autoread = true
 
