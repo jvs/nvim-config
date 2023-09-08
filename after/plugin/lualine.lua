@@ -10,9 +10,16 @@ local has_noice, noice = pcall(require, "noice")
 local recording = {}
 
 if has_noice then
+  local function has_recording_message()
+    return (
+      noice.api.status.mode.has() and
+      noice.api.status.mode.get() ~= "-- INSERT --"
+    )
+  end
+
   recording = {
       noice.api.status.mode.get,
-      cond = noice.api.status.mode.has,
+      cond = has_recording_message,
       color = { fg = "#ff9e64" },
   }
 end
