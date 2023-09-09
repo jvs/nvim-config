@@ -177,7 +177,11 @@ local plugins = {
     dependencies = {
       'nvim-telescope/telescope.nvim',
     },
-    config = true,
+    opts = {
+      commands = {
+        "comment", "lualine", "neo-tree", "toggleterm", "undotree", "zen-mode",
+      },
+    },
   },
 
   -- Themes
@@ -209,6 +213,5 @@ local lazy_opts = {
 
 require('lazy').setup(plugins, lazy_opts)
 
-require "user.commands"
 require "user.keymaps"
 require "user.options"
