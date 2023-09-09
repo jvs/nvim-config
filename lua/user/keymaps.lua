@@ -131,7 +131,8 @@ if not has_commanderly then
 end
 
 
-vim.keymap.set('n', '<leader><leader>', commanderly.open, { desc = 'Open command palette' })
+vim.keymap.set('n', '<leader><leader>', commanderly.open, {desc = 'Open command palette'})
+vim.keymap.set('v', '<leader><leader>', commanderly.open, {desc = 'Open command palette'})
 
 
 -- Create keymaps for commanderly commands.
