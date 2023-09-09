@@ -5,6 +5,9 @@ if not has_neotree then
   return
 end
 
+-- TODO: Find out if this is really necessary anymore.
+vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
 neotree.setup({
   close_if_last_window = true,
   enable_git_status = true,
