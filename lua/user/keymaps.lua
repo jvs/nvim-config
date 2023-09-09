@@ -3,21 +3,6 @@ local M = {}
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { noremap = true, silent = true })
 
 
--- Resize splits with alt+arrows.
-vim.keymap.set('n', '<A-Up>', ':resize +2<CR>', {
-  desc = 'Increase window height.',
-})
-vim.keymap.set('n', '<A-Down>', ':resize -2<CR>', {
-  desc = 'Decrease window height.',
-})
-vim.keymap.set('n', '<A-Left>', ':vertical resize -2<CR>', {
-  desc = 'Decrease window width.',
-})
-vim.keymap.set('n', '<A-Right>', ':vertical resize +2<CR>', {
-  desc = 'Increase window width.',
-})
-
-
 -- Set undo breakpoints after typing certain characters.
 vim.keymap.set('i', ',', ',<c-g>u', {})
 vim.keymap.set('i', '.', '.<c-g>u', {})
@@ -80,6 +65,12 @@ map("<leader>h", "window_left")
 map("<leader>j", "window_down")
 map("<leader>k", "window_up")
 map("<leader>l", "window_right")
+
+-- Resize splits with alt+arrows.
+map("<A-Up>", "increase_window_height")
+map("<A-Down>", "decrease_window_height")
+map("<A-Left>", "decrease_window_width")
+map("<A-Right>", "increase_window_width")
 
 -- Show the tree with <leader>t.
 map("<leader>t", "neotree_filesystem")
