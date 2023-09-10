@@ -179,7 +179,7 @@ local plugins = {
     },
     opts = {
       commands = {
-        "comment", "lualine", "neo-tree", "toggleterm", "undotree", "zen-mode",
+        "comment", "lualine", "neo-tree", "noice", "toggleterm", "undotree", "zen-mode",
       },
     },
   },
