@@ -36,11 +36,11 @@ local map = commanderly.map
 
 
 -- Cut, copy, and paste using the clipboard.
-map("<leader>x", "cut_to_clipboard", { mode = "v" })
-map("<leader>c", "copy_to_clipboard", { mode = "v" })
-map("<leader>v", "paste_from_clipboard", { mode = "n" })
-map("<leader>v", "paste_from_clipboard_over_selection", { mode = "v" })
-map("p", "paste_over_selection", { mode = "v" })
+map("<leader>x", "cut_to_clipboard")
+map("<leader>c", "copy_to_clipboard")
+map("<leader>v", "paste_from_clipboard")
+map("<leader>v", "paste_from_clipboard_over_selection")
+map("p", "paste_over_selection")
 
 -- Create splits with <leader>\ and <leader>-.
 map("<leader>\\", "vertical_split")
@@ -96,8 +96,8 @@ map("<C-l>", "toggle_terminal_4", { mode = { "i", "n", "t" } })
 -- Toggle comments with ctrl+/.
 map("<C-_>", "toggle_comment_current_line")
 map("<C-/>", "toggle_comment_current_line")
-map("<C-_>", "toggle_comment_selected_lines", { mode = "v" })
-map("<C-/>", "toggle_comment_selected_lines", { mode = "v" })
+map("<C-_>", "toggle_comment_selected_lines")
+map("<C-/>", "toggle_comment_selected_lines")
 
 -- LSP commands.
 -- (This function is called by after/plugin/lsp.lua.)
