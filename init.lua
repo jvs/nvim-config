@@ -28,6 +28,8 @@ local plugins = {
   -- Detect tabstop and shiftwidth automatically.
   'tpope/vim-sleuth',
 
+  'tpope/vim-fugitive',
+
   -- Database plugins.
   'tpope/vim-dadbod',
   -- 'kristijanhusak/vim-dadbod-ui',
