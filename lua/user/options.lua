@@ -11,6 +11,11 @@ vim.opt.smartindent = false
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 0
 
+-- Newer changes:
+vim.opt.showmode = false
+vim.opt.breakindent = true
+vim.opt.inccommand = 'split'
+
 vim.o.autoindent = true
 vim.o.autowrite = true
 vim.o.autowriteall = true
@@ -69,3 +74,31 @@ vim.o.autoread = true
 
 -- autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 -- autocmd FileType lua setlocal shiftwidth=2 tabstop=2
+
+-- Ignore the default colorschemes:
+vim.opt.wildignore:append({
+  "blue.vim",
+  "darkblue.vim",
+  "delek.vim",
+  "desert.vim",
+  "elflord.vim",
+  "evening.vim",
+  "industry.vim",
+  "habamax.vim",
+  "koehler.vim",
+  "lunaperche.vim",
+  "morning.vim",
+  "murphy.vim",
+  "pablo.vim",
+  "peachpuff.vim",
+  "quiet.vim",
+  "ron.vim",
+  "shine.vim",
+  "slate.vim",
+  "sorbet.vim",
+  "retrobox.vim",
+  "torte.vim",
+  "wildcharm.vim",
+  "zaibatsu.vim",
+  "zellner.vim",
+})

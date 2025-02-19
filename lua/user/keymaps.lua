@@ -12,10 +12,9 @@ vim.keymap.set('i', '<CR>', '<CR><c-g>u', {})
 
 
 -- Highlight on yank. (Not exactly a keymapping, but close enough.)
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = vim.highlight.on_yank,
-  group = highlight_group,
+  group = vim.api.nvim_create_augroup('YankHighlight', { clear = true }),
   pattern = '*',
 })
 
