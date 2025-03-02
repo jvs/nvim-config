@@ -107,6 +107,11 @@ function M.on_attach(_, bufnr)
     commanderly.map(keys, command, opts)
   end
 
+  lmap("gd", "lsp_find_definition")
+  lmap("gr", "lsp_rename_symbol")
+  lmap("gf", "lsp_find_references")
+  lmap("gt", "lsp_find_type_definition")
+
   lmap("[d", "previous_diagnostic")
   lmap("]d", "next_diagnostic")
 end
