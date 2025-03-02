@@ -530,41 +530,31 @@ local plugins = {
   },
 
   -- Themes
-  'Mofiqul/vscode.nvim',
   'EdenEast/nightfox.nvim',
-  'projekt0n/github-nvim-theme',
-  { 'rose-pine/neovim', name = 'rose-pine' },
+  'Mofiqul/vscode.nvim',
+  'folke/tokyonight.nvim',
   'shaunsingh/nord.nvim',
 
-  {
-    'AlexvZyl/nordic.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-        require('nordic').load()
-    end
-  },
+  { 'rose-pine/neovim', name = 'rose-pine' },
 
-  {
-    'neanias/everforest-nvim',
-    version = false,
-    lazy = false,
-    priority = 1000, -- make sure to load this before all the other start plugins
-    -- Optional; default configuration will be used if setup isn't called.
-    config = function()
-      require('everforest').setup({
-        -- Your config here
-      })
-    end,
-  },
+  -- 'AlexvZyl/nordic.nvim',
+  -- 'projekt0n/github-nvim-theme',
+  -- {
+  --   'neanias/everforest-nvim',
+  --   version = false,
+  --   lazy = false,
+  --   priority = 1000, -- make sure to load this before all the other start plugins
+  --   -- Optional; default configuration will be used if setup isn't called.
+  --   -- config = function()
+  --   --   require('everforest').setup({
+  --   --     -- Your config here
+  --   --   })
+  --   -- end,
+  -- },
 
   -- Copilot
     'github/copilot.vim',
 
-  -- {
-  --   'github/copilot.vim',
-  --   enabled = using_winterm,
-  -- },
     -- {
     --   'zbirenbaum/copilot-cmp',
     --   event = 'InsertEnter',
@@ -586,6 +576,7 @@ local plugins = {
     lazy = false,
     version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
     opts = {
+      hints = { enabled = false },
       -- add any opts here
       -- for example
       provider = "copilot",
