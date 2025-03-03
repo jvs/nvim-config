@@ -107,13 +107,19 @@ function M.on_attach(_, bufnr)
     commanderly.map(keys, command, opts)
   end
 
-  -- lmap("gr", "lsp_rename_symbol")
-  -- lmap("gd", "telescope_lsp_definitions")
-  -- lmap("gf", "telescope_lsp_references")
-  -- lmap("gt", "telescope_lsp_type_definitions")
+  -- lmap(",r", "lsp_rename_symbol")
+  -- lmap(",d", "telescope_lsp_definitions")
+  -- lmap(",f", "telescope_lsp_references")
+  -- lmap(",t", "telescope_lsp_type_definitions")
 
   lmap("[d", "previous_diagnostic")
   lmap("]d", "next_diagnostic")
 end
+
+-- Temporary, while after/plugin/lsp.lua is disabled.
+map(",r", "lsp_rename_symbol")
+map(",d", "telescope_lsp_definitions")
+map(",f", "telescope_lsp_references")
+map(",t", "telescope_lsp_type_definitions")
 
 return M
