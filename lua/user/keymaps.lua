@@ -49,9 +49,9 @@ map("<leader>-", "horizontal_split")
 map("<S-h>", "split_personality_previous")
 map("<S-l>", "split_personality_next")
 
--- Switch between buffers with <leader>e or <leader><tab>.
+-- Switch between buffers with <leader>e.
 map("<leader>e", "split_personality_show_switcher")
-map("<leader><tab>", "split_personality_show_switcher")
+-- map("<leader><tab>", "split_personality_show_switcher")
 
 -- Close buffers with <leader>w.
 map("<leader>w", "split_personality_close")
@@ -76,7 +76,7 @@ map("<leader>t", "neotree_filesystem")
 map("<leader>b", "neotree_buffers")
 
 -- Show the undo tree with ctrl+u.
-map("<leader>u", "undotree")
+-- map("<leader>u", "undotree")
 
 -- Telescope commands.
 map("<leader>o", "telescope_git_files")
@@ -107,10 +107,10 @@ function M.on_attach(_, bufnr)
     commanderly.map(keys, command, opts)
   end
 
-  lmap("gd", "lsp_find_definition")
-  lmap("gr", "lsp_rename_symbol")
-  lmap("gf", "lsp_find_references")
-  lmap("gt", "lsp_find_type_definition")
+  -- lmap("gr", "lsp_rename_symbol")
+  -- lmap("gd", "telescope_lsp_definitions")
+  -- lmap("gf", "telescope_lsp_references")
+  -- lmap("gt", "telescope_lsp_type_definitions")
 
   lmap("[d", "previous_diagnostic")
   lmap("]d", "next_diagnostic")
