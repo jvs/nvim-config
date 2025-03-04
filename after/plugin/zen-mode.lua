@@ -11,7 +11,7 @@ zen_mode.setup({
     width = 95,
     options = {
       colorcolumn = "",
-      cursorline = false,
+      cursorline = true,
       number = false,
       relativenumber = false,
       signcolumn = "no",
