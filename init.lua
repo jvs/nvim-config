@@ -528,6 +528,7 @@ local plugins = {
     opts = {
       commands = {
         "comment", "lualine", "neo-tree", "noice", "toggleterm", "zen-mode",
+        "snacks-scratch", "snacks-picker",
       },
     },
   },
@@ -682,6 +683,44 @@ local plugins = {
   --     require("telescope").load_extension("undo")
   --   end,
   -- },
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    ---@type snacks.Config
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      animate = { enabled = false },
+      bigfile = { enabled = true },
+      bufdelete = { enabled = false },
+      dashboard = { enabled = false },
+      debug = { enabled = false },
+      dim = { enabled = false },
+      explorer = { enabled = false },
+      git = { enabled = false },
+      gitbrowse = { enabled = false },
+      image = { enabled = false },
+      indent = { enabled = true },
+      input = { enabled = true },
+      lazygit = { enabled = false },
+      notifier = { enabled = false },
+      picker = { enabled = true },
+      profiler = { enabled = false },
+      quickfile = { enabled = true },
+      rename = { enabled = true },
+      scope = { enabled = false },
+      scratch = { enabled = true },
+      scroll = { enabled = true },
+      statuscolumn = { enabled = false },
+      terminal = { enabled = false },
+      toggle = { enabled = false },
+      win = { enabled = false },
+      words = { enabled = false },
+      zen = { enabled = false },
+    },
+  },
 
   -- Clipboard (for Windows Terminal)
   {
