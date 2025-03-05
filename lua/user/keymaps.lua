@@ -25,6 +25,22 @@ if not has_commanderly then
   error("Remaining keymaps require commanderly.nvim")
 end
 
+-- Experimental commands:
+-- commanderly.add_commands({
+--   {
+--     title = "Toggle Zen-Mode",
+--     id = "toggle_zen_mode",
+--     desc = "Toggle zen-mode.",
+--     -- requires = function()
+--     --   local has_zen_mode, _ = pcall(require, "zen-mode")
+--     --   return has_zen_mode
+--     -- end,
+--     run = function()
+--       require('snacks').zen()
+--     end,
+--   },
+-- })
+
 
 vim.keymap.set('n', '<leader><leader>', commanderly.open, {desc = 'Open command palette'})
 vim.keymap.set('v', '<leader><leader>', commanderly.open, {desc = 'Open command palette'})

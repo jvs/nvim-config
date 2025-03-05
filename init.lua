@@ -478,7 +478,7 @@ local plugins = {
     }
   },
 
-  'folke/zen-mode.nvim',
+  -- 'folke/zen-mode.nvim',
   -- 'mbbill/undotree',
   'RRethy/vim-illuminate',
 
@@ -527,8 +527,9 @@ local plugins = {
     },
     opts = {
       commands = {
-        "comment", "lualine", "neo-tree", "noice", "toggleterm", "zen-mode",
-        "snacks-scratch", "snacks-picker",
+        "comment", "lualine", "neo-tree", "noice", "toggleterm", "snacks",
+        -- "zen-mode",
+        -- "snacks-scratch", "snacks-picker",
       },
     },
   },
@@ -689,11 +690,27 @@ local plugins = {
     lazy = false,
     ---@type snacks.Config
     opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-      animate = { enabled = false },
       bigfile = { enabled = true },
+      input = { enabled = true },
+      picker = { enabled = true },
+      quickfile = { enabled = true },
+      rename = { enabled = true },
+      scratch = { enabled = true },
+
+      indent = {
+        enabled = true,
+        -- TODO: Figure out why this doesn't seem to be working.
+        only_scope = true,
+        only_current = true,
+      },
+      zen = {
+        enabled = true,
+        show = { statusline = true },
+      },
+
+      toggle = { enabled = false },
+
+      animate = { enabled = false },
       bufdelete = { enabled = false },
       dashboard = { enabled = false },
       debug = { enabled = false },
@@ -702,23 +719,34 @@ local plugins = {
       git = { enabled = false },
       gitbrowse = { enabled = false },
       image = { enabled = false },
-      indent = { enabled = true },
-      input = { enabled = true },
       lazygit = { enabled = false },
       notifier = { enabled = false },
-      picker = { enabled = true },
       profiler = { enabled = false },
-      quickfile = { enabled = true },
-      rename = { enabled = true },
       scope = { enabled = false },
-      scratch = { enabled = true },
-      scroll = { enabled = true },
+      scroll = { enabled = false },
       statuscolumn = { enabled = false },
       terminal = { enabled = false },
-      toggle = { enabled = false },
       win = { enabled = false },
       words = { enabled = false },
-      zen = { enabled = false },
+
+      styles = {
+        zen = {
+          enter = true,
+          fixbuf = false,
+          minimal = false,
+          width = 120,
+          height = 0,
+          backdrop = { transparent = false },
+          keys = { q = false },
+          zindex = 40,
+          wo = {
+            winhighlight = "NormalFloat:Normal",
+          },
+          w = {
+            snacks_main = true,
+          },
+        },
+      },
     },
   },
 
