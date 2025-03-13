@@ -478,7 +478,7 @@ local plugins = {
     }
   },
 
-  -- 'folke/zen-mode.nvim',
+  'folke/zen-mode.nvim',
   -- 'mbbill/undotree',
   'RRethy/vim-illuminate',
 
@@ -528,7 +528,7 @@ local plugins = {
     opts = {
       commands = {
         "comment", "lualine", "neo-tree", "noice", "toggleterm", "snacks",
-        -- "zen-mode",
+        "zen-mode",
         -- "snacks-scratch", "snacks-picker",
       },
     },
@@ -698,14 +698,15 @@ local plugins = {
       scratch = { enabled = true },
 
       indent = {
-        enabled = true,
+        enabled = false,
         -- TODO: Figure out why this doesn't seem to be working.
         only_scope = true,
         only_current = true,
       },
       zen = {
-        enabled = true,
-        show = { statusline = true },
+        enabled = false,
+        -- show = { statusline = true },
+        -- win = { backdrop = false },
       },
 
       toggle = { enabled = false },
@@ -729,24 +730,24 @@ local plugins = {
       win = { enabled = false },
       words = { enabled = false },
 
-      styles = {
-        zen = {
-          enter = true,
-          fixbuf = false,
-          minimal = false,
-          width = 120,
-          height = 0,
-          backdrop = { transparent = false },
-          keys = { q = false },
-          zindex = 40,
-          wo = {
-            winhighlight = "NormalFloat:Normal",
-          },
-          w = {
-            snacks_main = true,
-          },
-        },
-      },
+      -- styles = {
+      --   zen = {
+      --     enter = true,
+      --     fixbuf = false,
+      --     minimal = false,
+      --     width = 120,
+      --     height = 0,
+      --     backdrop = { transparent = false },
+      --     keys = { q = false },
+      --     zindex = 40,
+      --     wo = {
+      --       winhighlight = "NormalFloat:Normal",
+      --     },
+      --     w = {
+      --       snacks_main = true,
+      --     },
+      --   },
+      -- },
     },
   },
 
