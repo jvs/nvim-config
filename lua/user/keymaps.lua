@@ -12,10 +12,9 @@ vim.keymap.set('i', '<CR>', '<CR><c-g>u', {})
 
 
 -- Highlight on yank. (Not exactly a keymapping, but close enough.)
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = vim.highlight.on_yank,
-  group = highlight_group,
+  group = vim.api.nvim_create_augroup('YankHighlight', { clear = true }),
   pattern = '*',
 })
 
@@ -25,6 +24,22 @@ local has_commanderly, commanderly = pcall(require, "commanderly")
 if not has_commanderly then
   error("Remaining keymaps require commanderly.nvim")
 end
+
+-- Experimental commands:
+-- commanderly.add_commands({
+--   {
+--     title = "Toggle Zen-Mode",
+--     id = "toggle_zen_mode",
+--     desc = "Toggle zen-mode.",
+--     -- requires = function()
+--     --   local has_zen_mode, _ = pcall(require, "zen-mode")
+--     --   return has_zen_mode
+--     -- end,
+--     run = function()
+--       require('snacks').zen()
+--     end,
+--   },
+-- })
 
 
 vim.keymap.set('n', '<leader><leader>', commanderly.open, {desc = 'Open command palette'})
@@ -50,9 +65,9 @@ map("<leader>-", "horizontal_split")
 map("<S-h>", "split_personality_previous")
 map("<S-l>", "split_personality_next")
 
--- Switch between buffers with <leader>e or <leader><tab>.
+-- Switch between buffers with <leader>e.
 map("<leader>e", "split_personality_show_switcher")
-map("<leader><tab>", "split_personality_show_switcher")
+-- map("<leader><tab>", "split_personality_show_switcher")
 
 -- Close buffers with <leader>w.
 map("<leader>w", "split_personality_close")
@@ -77,7 +92,7 @@ map("<leader>t", "neotree_filesystem")
 map("<leader>b", "neotree_buffers")
 
 -- Show the undo tree with ctrl+u.
-map("<leader>u", "undotree")
+-- map("<leader>u", "undotree")
 
 -- Telescope commands.
 map("<leader>o", "telescope_git_files")
@@ -108,8 +123,19 @@ function M.on_attach(_, bufnr)
     commanderly.map(keys, command, opts)
   end
 
+  -- lmap(",r", "lsp_rename_symbol")
+  -- lmap(",d", "telescope_lsp_definitions")
+  -- lmap(",f", "telescope_lsp_references")
+  -- lmap(",t", "telescope_lsp_type_definitions")
+
   lmap("[d", "previous_diagnostic")
   lmap("]d", "next_diagnostic")
 end
+
+-- Temporary, while after/plugin/lsp.lua is disabled.
+map(",r", "lsp_rename_symbol")
+map(",d", "telescope_lsp_definitions")
+map(",f", "telescope_lsp_references")
+map(",t", "telescope_lsp_type_definitions")
 
 return M
