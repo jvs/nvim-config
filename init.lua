@@ -544,6 +544,7 @@ local plugins = {
 
   -- { 'catppuccin/nvim', name = 'catppuccin' },
   { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'romanaverin/charleston.nvim', name = "charleston" },
 
   -- 'AlexvZyl/nordic.nvim',
   -- 'projekt0n/github-nvim-theme',
