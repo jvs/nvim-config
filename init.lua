@@ -480,7 +480,9 @@ local plugins = {
 
   'folke/zen-mode.nvim',
   -- 'mbbill/undotree',
-  'RRethy/vim-illuminate',
+
+  -- broken at the moment;
+  -- 'RRethy/vim-illuminate',
 
   -- 'rcarriga/nvim-notify',
 
