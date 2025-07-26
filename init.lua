@@ -480,7 +480,9 @@ local plugins = {
 
   'folke/zen-mode.nvim',
   -- 'mbbill/undotree',
-  'RRethy/vim-illuminate',
+
+  -- broken at the moment;
+  -- 'RRethy/vim-illuminate',
 
   -- 'rcarriga/nvim-notify',
 
@@ -544,6 +546,7 @@ local plugins = {
 
   -- { 'catppuccin/nvim', name = 'catppuccin' },
   { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'romanaverin/charleston.nvim', name = "charleston" },
 
   -- 'AlexvZyl/nordic.nvim',
   -- 'projekt0n/github-nvim-theme',
