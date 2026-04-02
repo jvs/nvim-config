@@ -30,12 +30,6 @@ local plugins = {
   -- Detect tabstop and shiftwidth automatically.
   'tpope/vim-sleuth',
 
-  -- Database plugins.
-  -- 'tpope/vim-dadbod',
-  -- 'kristijanhusak/vim-dadbod-ui',
-  -- 'kristijanhusak/vim-dadbod-completion',
-
-
   -- LSP Configuration
   {
     'folke/lazydev.nvim',
@@ -158,8 +152,6 @@ local plugins = {
 
   -- broken at the moment;
   -- 'RRethy/vim-illuminate',
-
-  -- 'rcarriga/nvim-notify',
 
   {
     'folke/noice.nvim',
@@ -298,17 +290,13 @@ local plugins = {
       quickfile = { enabled = true },
       rename = { enabled = true },
       scratch = { enabled = true },
+      notifier = { enabled = true },
 
       indent = {
         enabled = false,
         -- TODO: Figure out why this doesn't seem to be working.
         only_scope = true,
         only_current = true,
-      },
-      zen = {
-        enabled = false,
-        -- show = { statusline = true },
-        -- win = { backdrop = false },
       },
 
       toggle = { enabled = false },
@@ -323,7 +311,6 @@ local plugins = {
       gitbrowse = { enabled = false },
       image = { enabled = false },
       lazygit = { enabled = false },
-      notifier = { enabled = false },
       profiler = { enabled = false },
       scope = { enabled = false },
       scroll = { enabled = false },
@@ -331,6 +318,7 @@ local plugins = {
       terminal = { enabled = false },
       win = { enabled = false },
       words = { enabled = false },
+      zen = { enabled = false },
     },
   },
 

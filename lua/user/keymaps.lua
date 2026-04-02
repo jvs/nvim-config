@@ -1,5 +1,3 @@
-local M = {}
-
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { noremap = true, silent = true })
 
 
@@ -97,28 +95,8 @@ map("<C-/>", "toggle_comment_current_line")
 map("<C-_>", "toggle_comment_selected_lines")
 map("<C-/>", "toggle_comment_selected_lines")
 
--- LSP commands.
--- (This function is called by after/plugin/lsp.lua.)
-function M.on_attach(_, bufnr)
-  local opts = { buffer = bufnr, remap = false }
-
-  local lmap = function(keys, command)
-    commanderly.map(keys, command, opts)
-  end
-
-  -- lmap(",r", "lsp_rename_symbol")
-  -- lmap(",d", "telescope_lsp_definitions")
-  -- lmap(",f", "telescope_lsp_references")
-  -- lmap(",t", "telescope_lsp_type_definitions")
-
-  lmap("[d", "previous_diagnostic")
-  lmap("]d", "next_diagnostic")
-end
-
 -- Temporary, while after/plugin/lsp.lua is disabled.
 map(",r", "lsp_rename_symbol")
 map(",d", "telescope_lsp_definitions")
 map(",f", "telescope_lsp_references")
 map(",t", "telescope_lsp_type_definitions")
-
-return M
