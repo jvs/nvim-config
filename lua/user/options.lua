@@ -64,11 +64,7 @@ vim.o.autoread = true
 --   pattern = { "*" },
 -- })
 
--- vim.o.laststatus = 2
--- vim.o.tabstop = 4
--- vim.o.shiftwidth = 4
 -- vim.o.softtabstop = 4
--- vim.opt.smartindent = true
 -- vim.o.undodir = '~/.nvim/undodir'
 -- wrapscan
 -- vim.opt.fileencoding = "utf-8"
