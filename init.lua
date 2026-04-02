@@ -457,15 +457,15 @@ local plugins = {
   },
 
   -- Terminal windows.
-  {
-    'akinsho/toggleterm.nvim',
-    version = "*",
-    lazy = false,
-    opts = {
-      direction = "float",
-      open_mapping = [[<c-\>]],
-    },
-  },
+  -- {
+  --   'akinsho/toggleterm.nvim',
+  --   version = "*",
+  --   lazy = false,
+  --   opts = {
+  --     direction = "float",
+  --     open_mapping = [[<c-\>]],
+  --   },
+  -- },
 
   -- Tree explorer.
   {
@@ -529,8 +529,9 @@ local plugins = {
     },
     opts = {
       commands = {
-        "comment", "lualine", "neo-tree", "noice", "toggleterm", "snacks",
-        "zen-mode",
+        "comment", "lualine", "neo-tree", "noice", "snacks",
+        -- "toggleterm", 
+        -- "zen-mode",
         -- "snacks-scratch", "snacks-picker",
       },
     },

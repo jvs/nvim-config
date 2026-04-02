@@ -103,10 +103,10 @@ map("<leader>/", "telescope_current_buffer_fuzzy_find")
 map("<leader>r", "telescope_resume")
 
 -- Toggle terminals 1, 2, 3, and 4 with ctrl+[jkhl].
-map("<C-j>", "toggle_terminal_1", { mode = { "i", "n", "t" } })
-map("<C-h>", "toggle_terminal_2", { mode = { "i", "n", "t" } })
-map("<C-k>", "toggle_terminal_3", { mode = { "i", "n", "t" } })
-map("<C-l>", "toggle_terminal_4", { mode = { "i", "n", "t" } })
+-- map("<C-j>", "toggle_terminal_1", { mode = { "i", "n", "t" } })
+-- map("<C-h>", "toggle_terminal_2", { mode = { "i", "n", "t" } })
+-- map("<C-k>", "toggle_terminal_3", { mode = { "i", "n", "t" } })
+-- map("<C-l>", "toggle_terminal_4", { mode = { "i", "n", "t" } })
 
 -- Toggle comments with ctrl+/.
 map("<C-_>", "toggle_comment_current_line")
