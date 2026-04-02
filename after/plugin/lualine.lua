@@ -62,7 +62,7 @@ lualine.setup({
     theme = 'auto',
     globalstatus = true,
   },
-  extensions = {'lazy', 'neo-tree', 'quickfix', 'toggleterm'},
+  extensions = {'lazy', 'neo-tree', 'quickfix'},
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff'},
