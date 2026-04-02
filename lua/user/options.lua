@@ -73,8 +73,6 @@ vim.o.autoread = true
 -- wrapscan
 -- vim.opt.fileencoding = "utf-8"
 
--- autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
--- autocmd FileType lua setlocal shiftwidth=2 tabstop=2
 
 -- Ignore the default colorschemes:
 vim.opt.wildignore:append({
