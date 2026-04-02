@@ -79,6 +79,7 @@ vim.o.autoread = true
 vim.opt.wildignore:append({
   "blue.vim",
   "darkblue.vim",
+  "default.vim",
   "delek.vim",
   "desert.vim",
   "elflord.vim",
@@ -98,6 +99,7 @@ vim.opt.wildignore:append({
   "sorbet.vim",
   "retrobox.vim",
   "torte.vim",
+  "unokai.vim",
   "wildcharm.vim",
   "zaibatsu.vim",
   "zellner.vim",
