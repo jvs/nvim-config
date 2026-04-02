@@ -59,7 +59,7 @@ vim.o.autoread = true
 -- Auto-reload files when modified externally.
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
   callback = function()
-    if vim.fn.getcmdwintype() == '' then
+    if vim.fn.getcmdwintype() == '' and vim.bo.buftype == '' then
       vim.cmd('checktime')
     end
   end,
