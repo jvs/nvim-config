@@ -56,13 +56,15 @@ vim.wo.signcolumn = 'yes:1'
 
 vim.o.autoread = true
 
--- auto-reload files when modified externally
--- https://unix.stackexchange.com/a/383044
--- This breaks the command-line window:
--- vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
---   command = "if mode() != 'c' | checktime | endif",
---   pattern = { "*" },
--- })
+-- Auto-reload files when modified externally.
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  callback = function()
+    if vim.fn.getcmdwintype() == '' then
+      vim.cmd('checktime')
+    end
+  end,
+  pattern = "*",
+})
 
 -- vim.o.softtabstop = 4
 -- vim.o.undodir = '~/.nvim/undodir'
