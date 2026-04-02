@@ -30,7 +30,7 @@ local plugins = {
   -- Detect tabstop and shiftwidth automatically.
   'tpope/vim-sleuth',
 
-  'tpope/vim-fugitive',
+  -- 'tpope/vim-fugitive',
 
   -- Database plugins.
   -- 'tpope/vim-dadbod',
@@ -478,7 +478,7 @@ local plugins = {
     }
   },
 
-  'folke/zen-mode.nvim',
+  -- 'folke/zen-mode.nvim',
   -- 'mbbill/undotree',
 
   -- broken at the moment;
@@ -543,12 +543,15 @@ local plugins = {
   'neanias/everforest-nvim',
   'savq/melange-nvim',
   'shaunsingh/nord.nvim',
+  'ramojus/mellifluous.nvim',
 
-  -- { 'catppuccin/nvim', name = 'catppuccin' },
-  { 'rose-pine/neovim', name = 'rose-pine' },
-  { 'romanaverin/charleston.nvim', name = "charleston" },
-
+  -- 'rmehri01/onenord.nvim',
   -- 'AlexvZyl/nordic.nvim',
+  -- 'sainnhe/sonokai',
+
+  { 'catppuccin/nvim', name = 'catppuccin' },
+  { 'rose-pine/neovim', name = 'rose-pine' },
+
   -- 'projekt0n/github-nvim-theme',
   -- {
   --   'neanias/everforest-nvim',
