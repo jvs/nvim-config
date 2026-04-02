@@ -3,6 +3,7 @@ vim.opt.swapfile = false
 vim.opt.wrap = false
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.timeoutlen = 2000
 vim.opt.sidescrolloff = 8
 vim.opt.cursorline = true
