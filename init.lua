@@ -290,7 +290,6 @@ local plugins = {
       quickfile = { enabled = true },
       rename = { enabled = true },
       scratch = { enabled = true },
-      notifier = { enabled = true },
 
       indent = {
         enabled = false,
@@ -311,6 +310,7 @@ local plugins = {
       gitbrowse = { enabled = false },
       image = { enabled = false },
       lazygit = { enabled = false },
+      notifier = { enabled = false },
       profiler = { enabled = false },
       scope = { enabled = false },
       scroll = { enabled = false },
