@@ -27,8 +27,8 @@ local using_winterm = os.getenv('USING_WINTERM') ~= nil
 local plugins = {
   { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
 
-  -- Detect tabstop and shiftwidth automatically.
-  'tpope/vim-sleuth',
+  -- Detect indentation.
+  { 'NMAC427/guess-indent.nvim', opts = {} },
 
   -- LSP Configuration
   {
