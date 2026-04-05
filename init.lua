@@ -196,7 +196,7 @@ local plugins = {
     },
     opts = {
       commands = {
-        "comment", "lualine", "neo-tree", "noice", "snacks",
+        "comment", "copilot", "lualine", "neo-tree", "noice", "snacks",
         -- "toggleterm", 
         -- "zen-mode",
         -- "snacks-scratch", "snacks-picker",
