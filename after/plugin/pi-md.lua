@@ -19,6 +19,13 @@ vim.api.nvim_create_autocmd("VimEnter", {
         if not has_commanderly and not vim.o.wrap then
           vim.o.wrap = true
         end
+
+        -- Start at the beginning of the file in insert mode.
+        vim.api.nvim_win_set_cursor(0, {1, 0})
+
+        if vim.fn.getline(1) == '' then
+          vim.cmd 'startinsert!'
+        end
       end
     end)
   end,
