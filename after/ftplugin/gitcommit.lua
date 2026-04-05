@@ -3,7 +3,6 @@ local has_commanderly, commanderly = pcall(require, "commanderly")
 if has_commanderly then
   commanderly.run("enable_spell_check")
   commanderly.run("hide_winbar")
-  -- commanderly.run("show_simple_statusline")
 end
 
 vim.cmd("colorscheme vscode")
