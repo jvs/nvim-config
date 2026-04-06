@@ -6,6 +6,8 @@ if not has_neotree then
 end
 
 neotree.setup({
+  -- use_popups_for_input = false, -- Use vim.ui.input() (snacks) instead of nui.input, avoiding a
+  -- mid-teardown render race that causes E21 on the neo-tree buffer.
   close_if_last_window = true,
   enable_git_status = true,
   enable_diagnostics = true,

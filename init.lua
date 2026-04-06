@@ -159,11 +159,17 @@ local plugins = {
     opts = {
       routes = {
         {
-          filter = {
-            event = "msg_show",
-            kind = "search_count",
-          },
+          filter = { event = "msg_show", kind = "search_count" },
           opts = { skip = true },
+        },
+        -- Skip noisy errors from race between nui and neo-tree.
+        {
+          filter = { event = "msg_show", kind = "emsg", find = "E21:" },
+          opts = { skip = true }
+        },
+        {
+          filter = { event = "msg_show", kind = "", find = "neo%-tree filesystem" },
+          opts = { skip = true }
         },
       },
     },
