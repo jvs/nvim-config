@@ -28,7 +28,7 @@ local plugins = {
   { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
 
   -- Detect indentation.
-  { 'NMAC427/guess-indent.nvim', opts = {} },
+  -- { 'NMAC427/guess-indent.nvim', opts = {} },
 
   -- LSP Configuration
   {
@@ -195,12 +195,7 @@ local plugins = {
       'nvim-telescope/telescope.nvim',
     },
     opts = {
-      commands = {
-        "comment", "copilot", "lualine", "neo-tree", "noice", "snacks",
-        -- "toggleterm", 
-        -- "zen-mode",
-        -- "snacks-scratch", "snacks-picker",
-      },
+      commands = { "comment", "copilot", "lualine", "neo-tree", "noice", "snacks" },
     },
   },
 
@@ -234,16 +229,16 @@ local plugins = {
     'github/copilot.vim',
 
   -- Find and replace.
-  {
-    'MagicDuck/grug-far.nvim',
-    config = function()
-      require('grug-far').setup({
-        -- options, see Configuration section below
-        -- there are no required options atm
-        -- engine = 'ripgrep' is default, but 'astgrep' can be specified
-      });
-    end
-  },
+  -- {
+  --   'MagicDuck/grug-far.nvim',
+  --   config = function()
+  --     require('grug-far').setup({
+  --       -- options, see Configuration section below
+  --       -- there are no required options atm
+  --       -- engine = 'ripgrep' is default, but 'astgrep' can be specified
+  --     });
+  --   end
+  -- },
 
   -- Telescope Undo
   -- {
