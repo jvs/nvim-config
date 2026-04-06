@@ -165,11 +165,16 @@ local plugins = {
         -- Skip noisy errors from race between nui and neo-tree.
         {
           filter = { event = "msg_show", kind = "emsg", find = "E21:" },
-          opts = { skip = true }
+          opts = { skip = true },
         },
         {
           filter = { event = "msg_show", kind = "", find = "neo%-tree filesystem" },
-          opts = { skip = true }
+          opts = { skip = true },
+        },
+        -- Skip noisy deprecation warnings from vim.lsp.get_active_clients() in fidget.
+        {
+          filter = { event = "msg_show", find = "vim.lsp.get_active_clients" },
+          opts = { skip = true },
         },
       },
     },
